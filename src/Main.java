@@ -6,5 +6,8 @@ public class Main {
 
         tmpclass.showName();
 
+        tmpclass.setName("Thats cool. Lets Rock");
+        tmpclass.showName();
+
     }
 }
