@@ -41,5 +41,6 @@ public class Invoice {
         //this have different funcitonlity so move this to other class
 
     //create separate class for those functionality
+    //so those can be used as single responsibilty
 
 }
