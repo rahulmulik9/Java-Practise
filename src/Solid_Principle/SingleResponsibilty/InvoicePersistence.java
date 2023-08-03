@@ -1,10 +1,10 @@
 package Solid_Principle.SingleResponsibilty;
 
 public class InvoicePersistence {
-    Invoice invoice;
+    MainTpoicInvoice mainTpoicInvoice;
 
-    public InvoicePersistence(Invoice invoice) {
-        this.invoice = invoice;
+    public InvoicePersistence(MainTpoicInvoice mainTpoicInvoice) {
+        this.mainTpoicInvoice = mainTpoicInvoice;
     }
 
     public void saveToFile(String filename) {

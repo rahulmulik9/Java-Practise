@@ -1,13 +1,13 @@
 package Solid_Principle.SingleResponsibilty;
 
-public class Invoice {
+public class MainTpoicInvoice {
         public Book book;
         public int quantity;
         public double discountRate;
         public double taxRate;
         public double total;
 
-        public Invoice(Book book, int quantity, double discountRate, double taxRate) {
+        public MainTpoicInvoice(Book book, int quantity, double discountRate, double taxRate) {
             this.book = book;
             this.quantity = quantity;
             this.discountRate = discountRate;

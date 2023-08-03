@@ -1,17 +1,17 @@
 package Solid_Principle.SingleResponsibilty;
 
 public class InvoicePrinter {
-        private Invoice invoice;
+        private MainTpoicInvoice mainTpoicInvoice;
 
-        public InvoicePrinter(Invoice invoice) {
-            this.invoice = invoice;
+        public InvoicePrinter(MainTpoicInvoice mainTpoicInvoice) {
+            this.mainTpoicInvoice = mainTpoicInvoice;
         }
 
         public void print() {
-            System.out.println(invoice.quantity + "x " + invoice.book.name + " " + invoice.book.price + " $");
-            System.out.println("Discount Rate: " + invoice.discountRate);
-            System.out.println("Tax Rate: " + invoice.taxRate);
-            System.out.println("Total: " + invoice.total + " $");
+            System.out.println(mainTpoicInvoice.quantity + "x " + mainTpoicInvoice.book.name + " " + mainTpoicInvoice.book.price + " $");
+            System.out.println("Discount Rate: " + mainTpoicInvoice.discountRate);
+            System.out.println("Tax Rate: " + mainTpoicInvoice.taxRate);
+            System.out.println("Total: " + mainTpoicInvoice.total + " $");
         }
 
 }

@@ -1,6 +1,6 @@
 package Solid_Principle.Open_Closed_Principle;
 
-public class _1OpenCLose {
+public class MainTopic {
     //Close for the modification but open for expansion
     //no one able to modified or change the method inside class but can extense class and can be add new functionlity
 
@@ -37,7 +37,7 @@ public class _1OpenCLose {
 //        }
 //    }
 
-    //so Operation class is open to extension but it can be close to modification
+    //so Operation class is open to extension but it can be close to modification.
 
 
 
