@@ -1,0 +1,11 @@
+Solid Principle
+1] The Single Responsibility Principle:
+  class should do one thing and therefore it should have only a single reason to change.
+2] The Open-Closed Principle :
+  classes should be open for extension and closed to modification.
+3] The Liskov Substitution Principle
+ The Liskov Substitution Principle states that subclasses should be substitutable for their base classes
+4] The Interface Segregation Principle
+     Segregation means keeping things separated, and the Interface Segregation Principle is about separating the interfaces.
+5] The Dependency Inversion Principle
+    The Dependency Inversion principle states that our classes should depend upon interfaces or abstract classes instead of concrete classes and functions
