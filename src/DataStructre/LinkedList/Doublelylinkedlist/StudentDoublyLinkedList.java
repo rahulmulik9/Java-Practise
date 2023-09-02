@@ -35,9 +35,29 @@ public class StudentDoublyLinkedList {
     }
 
     public void removeFromFirst() {
+        StudentNode current;
+        if (head == null) {
+            System.out.println("List is empty");
+        } else {
+            head = head.getNext();
+            head.getPrivious().setNext(null);
+            head.setPrivious(null);
+        }
     }
 
     public void removeFromLast() {
+        StudentNode current;
+        if(head == null){
+            System.out.println("List is empty");
+        }else {
+            current=head;
+            while (current.getNext() != null){
+                current = current.getNext();
+            }
+            current.getPrivious().setNext(null);
+            current.setPrivious(null);
+
+        }
     }
 
     public void getprint() {
@@ -49,7 +69,6 @@ public class StudentDoublyLinkedList {
             current = current.getNext();
         }
         System.out.println(current.toString());
-
 
 
     }
