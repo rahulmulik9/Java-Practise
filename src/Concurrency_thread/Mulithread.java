@@ -18,12 +18,14 @@ public class Mulithread {
 }
 
 class ThreadColor {
+
     public static final String BLACK = "\u001B[30m";
     public static final String RED = "\u001B[31m";
     public static final String YELLOW = "\u001B[33m";
 }
 
 class CountDown {
+    private int i;
     public void doCountDown() {
         String color;
         switch (Thread.currentThread().getName()) {
@@ -37,7 +39,7 @@ class CountDown {
                 color = ThreadColor.BLACK;
         }
 
-        for (int i = 10; i > 0; i--) {
+        for (i = 10; i > 0; i--) {
             System.out.println(color + Thread.currentThread().getName() + " :i = " + i);
         }
     }
