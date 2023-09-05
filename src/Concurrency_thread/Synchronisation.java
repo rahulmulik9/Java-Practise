@@ -20,7 +20,7 @@ public class Synchronisation {
         to get synchronize the output add keyword synchronized in doCountdown then first t1 run then t2 run
         */
 
-        //we cant synchronise the constructor.this will go to race condition
+        //we cant synchronise the constructor.this will go to RACE condition
         //onyl methods can be synchronise
         //only one thread at a time will be locked
 
