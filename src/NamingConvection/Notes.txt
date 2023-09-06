@@ -1,0 +1,29 @@
+Packages:
+      1] Always in lower cases
+      2] Dont add "-" in package names
+      3] e.g. com.rahuljava
+
+Class
+      1] Camel case
+      2] Class name should be noun (they represent things)
+      3] Start with capital letters
+      4] Each word is in capital words
+      5] e.g. Student
+
+Method
+      1] mixed case
+      2] First letter is small , other starting letter is capital
+      3] They are verb, should reflect action performed
+      4] e,g, getName()
+
+Constant
+      1] Always in capital letter (all upper case)
+      2] Seperate words in underscore
+      3] e.g. MAX_BOUNDARY
+
+Variables
+      1] mixed cases
+      2] meaningful and indicative (indicate something)
+      3] Start with lower case
+      4] Don't use underscore
+      5]e.g. boxLength
