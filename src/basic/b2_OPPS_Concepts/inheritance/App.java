@@ -15,5 +15,9 @@ public class App {
 
         //calling animal method using super keywords used in the dog overload method
         theDog.overloadMethod("Hi");
+
+        //create object of animal which will only able to access animal class method
+        Animal theAnimal = new Animal("Jonny",14,4);
+        theAnimal.overloadMethod("Hi");
     }
 }
