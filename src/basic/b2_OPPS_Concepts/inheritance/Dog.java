@@ -38,4 +38,7 @@ public class Dog extends Animal{
         super.overloadMethod(ab);
         System.out.println("Dog override method is called");
     }
+    public void callingParentMetho(){
+        super.overloadMethod("Called");
+    }
 }
