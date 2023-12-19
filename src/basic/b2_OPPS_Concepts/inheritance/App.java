@@ -23,5 +23,13 @@ public class App {
         //calling parent and child class method from grandchildren class
         MyDog theMyDog = new MyDog("Robin",25,5,"Shefard",4,2005);
        theMyDog.callingAllParentMethod();
+
+       //object creating
+        //not possible
+        //MyDog myd=new Animal("Jonny",14,4);
+
+        //possible
+        Animal am=new MyDog("Robin",25,5,"Shefard",4,2005);
+
     }
 }
