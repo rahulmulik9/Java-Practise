@@ -19,5 +19,9 @@ public class App {
         //create object of animal which will only able to access animal class method
         Animal theAnimal = new Animal("Jonny",14,4);
         theAnimal.overloadMethod("Hi");
+
+        //calling parent and child class method from grandchildren class
+        MyDog theMyDog = new MyDog("Robin",25,5,"Shefard",4,2005);
+       theMyDog.callingAllParentMethod();
     }
 }
