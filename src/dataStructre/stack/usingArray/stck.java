@@ -1,4 +1,4 @@
-package basic.DataStructure.stack.usingArray;
+package dataStructre.stack.usingArray;
 
 public class stck {
 

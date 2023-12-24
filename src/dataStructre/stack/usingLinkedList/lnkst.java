@@ -1,4 +1,4 @@
-package basic.DataStructure.stack.usingLinkedList;
+package dataStructre.stack.usingLinkedList;
 
 public class lnkst {
 

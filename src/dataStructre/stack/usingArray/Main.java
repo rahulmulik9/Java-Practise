@@ -1,4 +1,4 @@
-package basic.DataStructure.stack.usingArray;
+package dataStructre.stack.usingArray;
 
 import java.util.Scanner;
 //by using array for stack we will ad element as uual but we keep track of index where last element addded

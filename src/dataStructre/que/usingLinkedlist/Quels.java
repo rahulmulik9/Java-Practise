@@ -1,4 +1,4 @@
-package basic.DataStructure.que.usingLinkedlist;
+package dataStructre.que.usingLinkedlist;
 
 public class Quels {
     Node head;

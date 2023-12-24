@@ -1,4 +1,4 @@
-package basic.DataStructure.que.usingLinkedlist;
+package dataStructre.que.usingLinkedlist;
 
 import java.util.Scanner;
 

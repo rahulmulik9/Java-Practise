@@ -1,4 +1,4 @@
-package basic.DataStructure.que.usingArray;
+package dataStructre.que.usingArray;
 
 public class QueArray {
     int[] ary;
