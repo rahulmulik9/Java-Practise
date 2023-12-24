@@ -1,4 +1,4 @@
-package dataStructre.tree;
+package dataStructre.tree.binaryTree;
 
 public class Main {
 
