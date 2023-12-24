@@ -1,19 +1,11 @@
 package dataStructre.linkedList.SinglyLinkedList;
 
 public class Employee {
-    private int id;
     private String name;
+    private int id;
 
-    public Employee(int id, String name) {
-        this.id = id;
+    public Employee(String name, int id) {
         this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
         this.id = id;
     }
 
@@ -21,15 +13,7 @@ public class Employee {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+    public int getId() {
+        return id;
     }
 }
