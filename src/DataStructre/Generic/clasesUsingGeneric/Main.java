@@ -12,8 +12,15 @@ public class Main {
         //using generic class
         ClsGeneric myGINt=new ClsGeneric(10);
         ClsGeneric myGStr=new ClsGeneric("abc");
+
+        //Better practise
+        ClsGeneric <Integer>myGINta=new ClsGeneric<Integer>(10);
+        ClsGeneric <String>myGStrb=new ClsGeneric<String>("abc");
+
         System.out.println(myGINt.getAb());
         System.out.println(myGStr.getAb());
+        System.out.println(myGINta.getAb());
+        System.out.println(myGStrb.getAb());
     }
 }
 
