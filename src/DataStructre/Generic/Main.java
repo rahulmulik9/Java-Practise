@@ -1,4 +1,4 @@
-package DataStructre.Generic;
+package dataStructre.Generic;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class Main {
         /*
         Suppose there are three array of integer, string, character
         You want to print them , so instead if creating method for each of them , you can create a method with genericsc
-        Generic not valid for Simple data type such as int, char...it is valid for Integer ,Character,  String
+       Most important thing to remember  Generic not valid for Simple data type such as int, char...it is valid for Integer ,Character,  String
          */
         Integer[] intary = {1, 2, 3, 4};
         String[] strary = {"Ab", "Bb", "Cc", "Dd"};
