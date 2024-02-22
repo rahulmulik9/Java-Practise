@@ -1,4 +1,4 @@
-package basic.b4_interface;
+package basic.classoopsconcepts.b4_interface;
 
 public class App {
     public static void main(String[] args) {

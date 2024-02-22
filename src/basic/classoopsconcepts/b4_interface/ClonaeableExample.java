@@ -1,4 +1,4 @@
-package basic.b4_interface;
+package basic.classoopsconcepts.b4_interface;
 
 
 class ClonaeableExample implements Cloneable {
