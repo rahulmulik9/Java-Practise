@@ -1,4 +1,4 @@
-package basic.b2_OPPS_Concepts.lamdaExpression.Intro.FunctionalInterface;
+package basic.b2_OPPS_Concepts.lamdaExpression.FunctionalInterface;
 
 public class Main {
     public static void main(String[] args) {

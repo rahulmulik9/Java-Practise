@@ -25,16 +25,19 @@ public class Main {
                 new Person("Charlie", "Brown")));
 
 
-        //anonymous method calling
+        // 1 => using anonymous method
+        //this compareTo method is given by java in java.String class
         people.sort((o1, o2) -> o1.lastName().compareTo(o2.lastName()));
 
 
-        //to do in regular way we have create class Comparator
+
+        //2 => Using seperate class
         //You can also create class and implment comparator ...see another class created at the last
         people.sort(new NameComparator());
 
-        //here I am using anonymous class,
-        // Using anonymous class
+
+
+        // 3 => Using anonymous class
         var comparatorLastName = new Comparator<Person>() {
 
             @Override
@@ -43,33 +46,32 @@ public class Main {
             }
         };
 
-        //
         people.sort(comparatorLastName);
         System.out.println(people);
 
 
 
-        //another example
-//        interface EnhancedComparator<T> extends Comparator<T> {
-//            int secondLevel(T o1, T o2);
-//        }
-//
-//        var comparatorMixed = new EnhancedComparator<Person>() {
-//
-//            @Override
-//            public int compare(Person o1, Person o2) {
-//                int result = o1.lastName().compareTo(o2.lastName());
-//                return (result == 0 ? secondLevel(o1, o2) : result);
-//            }
-//
-//            @Override
-//            public int secondLevel(Person o1, Person o2) {
-//                return o1.firstName().compareTo(o2.firstName());
-//            }
-//        };
-//
-//        people.sort(comparatorMixed);
-//        System.out.println(people);
+       //4=> another example using interface
+        interface EnhancedComparator<T> extends Comparator<T> {
+            int secondLevel(T o1, T o2);
+        }
+
+        var comparatorMixed = new EnhancedComparator<Person>() {
+
+            @Override
+            public int compare(Person o1, Person o2) {
+                int result = o1.lastName().compareTo(o2.lastName());
+                return (result == 0 ? secondLevel(o1, o2) : result);
+            }
+
+            @Override
+            public int secondLevel(Person o1, Person o2) {
+                return o1.firstName().compareTo(o2.firstName());
+            }
+        };
+
+        people.sort(comparatorMixed);
+        System.out.println(people);
 
     }
 }
