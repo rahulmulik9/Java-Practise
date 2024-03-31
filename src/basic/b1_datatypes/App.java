@@ -1,6 +1,7 @@
 package basic.b1_datatypes;
 
 public class App {
+    //temparay commnet dleete this because used to check repo is working or not
     public static void main(String[] args) {
 
         int intmin=Integer.MIN_VALUE;
