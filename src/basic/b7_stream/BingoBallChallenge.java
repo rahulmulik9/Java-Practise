@@ -5,6 +5,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class BingoBallChallenge {
+    //this is stream simple example
     public static void main(String[] args) {
         int seed = 1;
         var streamG = Stream.of("G1","G2","G3","G4","G5","G6","G7","G8","G9","G10","G11","G12","G13","G14","G15");
