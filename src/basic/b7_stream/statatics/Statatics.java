@@ -1,4 +1,4 @@
-package basic.b7_stream;
+package basic.b7_stream.statatics;
 
 import java.util.stream.IntStream;
 
