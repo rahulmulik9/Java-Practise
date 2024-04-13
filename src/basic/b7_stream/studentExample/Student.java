@@ -1,8 +1,5 @@
 package basic.b7_stream.studentExample;
 
-import basic.b7_stream.Course;
-import basic.b7_stream.CourseEngagement;
-
 import java.time.LocalDate;
 import java.util.*;
 
@@ -18,10 +15,10 @@ public class Student {
     private final String gender;
     private final boolean programmingExperience;
 
-    private final Map<String, basic.b7_stream.CourseEngagement> engagementMap = new HashMap<>();
+    private final Map<String, CourseEngagement> engagementMap = new HashMap<>();
 
     public Student(String countryCode, int yearEnrolled, int ageEnrolled, String gender,
-                   boolean programmingExperience, basic.b7_stream.Course... courses) {
+                   boolean programmingExperience, Course... courses) {
         studentId = lastStudentId++;
         this.countryCode = countryCode;
         this.yearEnrolled = yearEnrolled;
@@ -29,19 +26,19 @@ public class Student {
         this.gender = gender;
         this.programmingExperience = programmingExperience;
 
-        for (basic.b7_stream.Course course : courses) {
+        for (Course course : courses) {
             addCourse(course, LocalDate.of(yearEnrolled, 1, 1));
         }
     }
 
-    public void addCourse(basic.b7_stream.Course newCourse) {
+    public void addCourse(Course newCourse) {
         addCourse(newCourse, LocalDate.now());
     }
 
-    public void addCourse(basic.b7_stream.Course newCourse, LocalDate enrollDate) {
+    public void addCourse(Course newCourse, LocalDate enrollDate) {
 
         engagementMap.put(newCourse.courseCode(),
-                new basic.b7_stream.CourseEngagement(newCourse, enrollDate, "Enrollment"));
+                new CourseEngagement(newCourse, enrollDate, "Enrollment"));
     }
 
     public long getStudentId() {
@@ -68,7 +65,7 @@ public class Student {
         return programmingExperience;
     }
 
-    public Map<String, basic.b7_stream.CourseEngagement> getEngagementMap() {
+    public Map<String, CourseEngagement> getEngagementMap() {
         return Map.copyOf(engagementMap);
     }
 
@@ -113,21 +110,21 @@ public class Student {
         return data[random.nextInt(data.length)];
     }
 
-    private static basic.b7_stream.Course[] getRandomSelection(basic.b7_stream.Course... courses) {
+    private static Course[] getRandomSelection(Course... courses) {
 
         int courseCount = random.nextInt(1, courses.length + 1);
-        List<basic.b7_stream.Course> courseList = new ArrayList<>(Arrays.asList(courses));
+        List<Course> courseList = new ArrayList<>(Arrays.asList(courses));
         Collections.shuffle(courseList);
-        List<basic.b7_stream.Course> selectedCourses = courseList.subList(0, courseCount);
-        return selectedCourses.toArray(new basic.b7_stream.Course[0]);
+        List<Course> selectedCourses = courseList.subList(0, courseCount);
+        return selectedCourses.toArray(new Course[0]);
     }
 
-    public static basic.b7_stream.Student getRandomStudent(basic.b7_stream.Course... courses) {
+    public static Student getRandomStudent(Course... courses) {
 
         int maxYear = LocalDate.now().getYear() + 1;
-        basic.b7_stream.Course[] randomCourses = getRandomSelection(courses);
+        Course[] randomCourses = getRandomSelection(courses);
 
-        basic.b7_stream.Student student = new basic.b7_stream.Student(
+        Student student = new Student(
                 getRandomVal("AU", "CA", "CN", "GB", "IN", "UA", "US"),
                 random.nextInt(2015, maxYear),
                 random.nextInt(18, 90),
