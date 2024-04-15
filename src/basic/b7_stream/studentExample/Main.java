@@ -52,5 +52,42 @@ public class Main {  public static void main(String[] args) {
     }
     System.out.println("# of students >= 60 = " + (students.length - total));
 
+
+//terminal operation
+    var ageStream =Arrays.stream(students).
+            mapToInt(Student::getAgeEnrolled);
+    System.out.println("Stat for enrolled age" + ageStream.summaryStatistics());
+
+    var currentAgeStream =Arrays.stream(students).
+            mapToInt(Student::getAge);
+    System.out.println("Stat for current age" + currentAgeStream.summaryStatistics());
+
+    Arrays.stream(students)
+            .map(Student::getCountryCode)
+            .distinct()
+            .sorted()
+            .forEach(s -> System.out.print(s + " "));
+
+    System.out.println();
+    boolean longTerm = Arrays.stream(students)
+            .anyMatch(s -> (s.getAge() - s.getAgeEnrolled() >= 7) &&
+                    (s.getMonthsSinceActive() < 12));
+    System.out.println("longTerm students? " + longTerm);
+
+    long longTermCount = Arrays.stream(students)
+            .filter(s -> (s.getAge() - s.getAgeEnrolled() >= 7) &&
+                    (s.getMonthsSinceActive() < 12))
+            .count();
+    System.out.println("longTerm students? " + longTermCount);
+
+    Arrays.stream(students)
+            .filter(s -> (s.getAge() - s.getAgeEnrolled() >= 7) &&
+                    (s.getMonthsSinceActive() < 12))
+            .filter(s -> !s.hasProgrammingExperience())
+            .limit(5)
+            .forEach(System.out::println);
+
+
+
 }
 }
