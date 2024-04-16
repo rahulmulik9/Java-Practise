@@ -87,7 +87,21 @@ public class Main {  public static void main(String[] args) {
             .limit(5)
             .forEach(System.out::println);
 
+    var longTimeLearners = Arrays.stream(students)
+            .filter(s -> (s.getAge() - s.getAgeEnrolled() >= 7) &&
+                    (s.getMonthsSinceActive() < 12))
+            .filter(s -> !s.hasProgrammingExperience())
+            .limit(5)
+            .toArray(Student[]::new);
 
+    var learners = Arrays.stream(students)
+            .filter(s -> (s.getAge() - s.getAgeEnrolled() >= 7) &&
+                    (s.getMonthsSinceActive() < 12))
+            .filter(s -> !s.hasProgrammingExperience())
+            .limit(5)
+            .collect(Collectors.toList());
+
+    Collections.shuffle(learners);
 
 }
 }
