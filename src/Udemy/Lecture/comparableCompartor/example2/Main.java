@@ -1,4 +1,4 @@
-package Udemy.Lecture.comparable.example2;
+package Udemy.Lecture.comparableCompartor.example2;
 
 import java.util.Arrays;
 

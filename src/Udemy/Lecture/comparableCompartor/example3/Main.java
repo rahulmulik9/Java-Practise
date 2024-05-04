@@ -1,7 +1,6 @@
-package Udemy.Lecture.comparable.example3;
+package Udemy.Lecture.comparableCompartor.example3;
 
 
-import java.security.interfaces.DSAPublicKey;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package Udemy.Lecture.comparable.example1;
+package Udemy.Lecture.comparableCompartor.example1;
 
 import java.util.Comparator;
 
@@ -40,6 +40,9 @@ public class Main {
         myxa.differenacBetweenComparaeVsComparator();
     }
 }
+
+
+//differance between comparable vs comparator
 
 class SimpleExample {
 
@@ -94,3 +97,4 @@ class StudentComparator implements Comparator<Student> {
         return Integer.compare(o1.id, o2.id);
     }
 }
+
