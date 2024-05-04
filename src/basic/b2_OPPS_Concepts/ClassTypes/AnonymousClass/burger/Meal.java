@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Meal {
-
     private double price = 5.0;
     private Burger burger;
     private Item drink;

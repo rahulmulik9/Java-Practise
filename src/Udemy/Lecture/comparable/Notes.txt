@@ -1,0 +1,19 @@
+Comparable
+public interface Comparable<T>{
+  int compareTo(T o);
+}
+
+1:Compare the argument of current instance
+2:Arryas.sort implement this method
+
+
+
+comparator
+public interface Comaprator<T>{
+      int compare(T o1, T o2);
+}
+
+Compare two argument of the same type with each other
+Arrays.sort(T[] element, Comparator<>)
+
+
