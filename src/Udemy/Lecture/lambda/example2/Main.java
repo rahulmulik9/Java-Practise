@@ -15,6 +15,12 @@ public class Main {
         //using customer interface
         list.forEach((s -> System.out.println(s+", ")));
 
+        list.forEach((var myString) -> {
+            char first = myString.charAt(0);
+            myString =myString+first;
+            System.out.println(myString);
+        });
+
 
 
 
