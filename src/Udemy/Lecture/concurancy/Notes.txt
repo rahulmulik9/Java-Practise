@@ -1,0 +1,5 @@
+Creating thread doesn't require as many resources as creating process does.
+Every thread created by a process share that process memory space the heap
+Every process as heap  and thread has thread stack
+Concurrency refer to an application doing more than one thing at a time
+Concurrency allows different parts of program to make progress independently, often leading to better resource utilization and improve performance
