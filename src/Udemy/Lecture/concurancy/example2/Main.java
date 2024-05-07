@@ -1,6 +1,5 @@
 package Udemy.Lecture.concurancy.example2;
 
-import basic.b1_datatypes.b10_Linkedlist.Song;
 
 public class Main {
     public static void main(String[] args) {
