@@ -7,6 +7,16 @@ public class Main {
         System.out.println(thread.getName());                 //main
 
         printThredState(thread);
+
+        thread.setPriority(Thread.MIN_PRIORITY);
+        printThredState(thread);
+
+        MyThread myextrndedthread = new MyThread();
+        MyRunnableThread myRunnableThread = new MyRunnableThread();
+       // myextrndedthread.start();
+        myextrndedthread.run();
+        System.out.println(myextrndedthread.getState().toString() + myextrndedthread.getPriority());
+        myRunnableThread.run();
     }
 
     public static void printThredState(Thread thread){
@@ -17,5 +27,37 @@ public class Main {
         System.out.println("State : "+ thread.getState());
         System.out.println("Is Alive : "+ thread.isAlive());
         System.out.println("___________________________________");
+    }
+
+}
+
+class MyThread extends Thread{
+
+    public void run(){
+        for(int i=0;i<6;i++){
+            System.out.println(i+" : Extending thread");
+            try {
+                Thread.sleep(500);
+            }
+            catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+
+    }
+}
+
+class MyRunnableThread implements Runnable{
+    @Override
+    public void run() {
+        for(int i=0;i<6;i++){
+            System.out.println(i + " : Implement Runnbale ");
+            try {
+                Thread.sleep(500);
+            }
+            catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
     }
 }
