@@ -22,3 +22,7 @@ public enum ThreadColor {
         return color;
     }
 }
+
+
+
+//added for to go on git for commit..learne about enums
