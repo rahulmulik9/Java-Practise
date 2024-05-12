@@ -1,4 +1,4 @@
-package Udemy.Lecture.concurancy.example7_synchronization;
+package Udemy.Lecture.concurancy.example7_synchronization.synchroniseMethod;
 
 
 public class Main {
