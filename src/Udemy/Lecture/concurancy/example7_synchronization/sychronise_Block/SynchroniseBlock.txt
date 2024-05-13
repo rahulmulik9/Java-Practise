@@ -2,3 +2,5 @@ Every object instance in java has built in intrinsic lock, also known as monitor
 Thread acquired lock by executing a synchronized method on the instance, or by using instance as parameter to synchronized statement.
 Thread release lock when it exits from synchronized block
 One thread at a time can acquired lock
+
+tempNotice : Learn about this and write in notion
