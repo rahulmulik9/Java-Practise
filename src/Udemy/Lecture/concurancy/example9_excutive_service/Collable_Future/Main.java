@@ -32,6 +32,9 @@ public class Main {
         List<CallableTask> taskList = List.of(new CallableTask("Rahul"),new CallableTask("Abhijit"),new CallableTask("Animt"));
         executorService.invokeAll(taskList);
 
+        String finalresult = executorService.invokeAll(taskList).toString();
+        String singleResult = executorService.invokeAny(taskList);
+
         executorService.shutdown();
     }
 }
