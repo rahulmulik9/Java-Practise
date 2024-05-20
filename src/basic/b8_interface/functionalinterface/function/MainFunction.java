@@ -1,4 +1,4 @@
-package basic.b8_interface.functionalinterface.Example.Function;
+package basic.b8_interface.functionalinterface.function;
 
 import java.util.function.Function;
 

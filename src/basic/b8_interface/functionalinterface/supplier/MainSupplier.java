@@ -1,4 +1,4 @@
-package basic.b8_interface.functionalinterface.Example.Supplier;
+package basic.b8_interface.functionalinterface.supplier;
 
 import java.util.function.Supplier;
 interface OwnSupplier<T>{

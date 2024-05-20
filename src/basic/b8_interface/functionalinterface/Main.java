@@ -1,4 +1,4 @@
-package basic.b8_interface.functionalinterface.Example;
+package basic.b8_interface.functionalinterface;
 
 interface Calculator{
     public int getAddition(int a, int b);

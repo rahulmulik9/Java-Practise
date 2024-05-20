@@ -1,4 +1,4 @@
-package basic.b8_interface.functionalinterface.Example.Predicate;
+package basic.b8_interface.functionalinterface.predicate;
 
 import java.util.function.Predicate;
 
