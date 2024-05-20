@@ -17,7 +17,12 @@ class CallableTask implements Callable<String> {
         return "Hello " + name;
     }
 
-
+    @Override
+    public String toString() {
+        return "CallableTask{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
 
 public class Main {
