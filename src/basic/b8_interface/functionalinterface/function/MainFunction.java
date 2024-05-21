@@ -26,7 +26,6 @@ public class MainFunction {
         System.out.println(sqr);
         System.out.println(sqr1);
 
-
         //using in built function
 
 

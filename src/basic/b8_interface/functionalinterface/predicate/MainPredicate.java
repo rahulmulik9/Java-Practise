@@ -47,7 +47,6 @@ public class MainPredicate {
             }
         }.test("Rahul");
 
-
         //operation for integer
         boolean isSmall = new Check<Integer>(){
             @Override
