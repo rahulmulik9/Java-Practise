@@ -1,4 +1,4 @@
-package dataStructre.hashTable;
+package DataStructre.hashTable;
 
 public class Product {
     private String name;

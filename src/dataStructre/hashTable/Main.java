@@ -1,4 +1,4 @@
-package dataStructre.hashTable;
+package DataStructre.hashTable;
 
 public class Main {
     public static void main(String[] args) {
