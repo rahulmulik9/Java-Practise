@@ -1,5 +1,4 @@
-package dataStructre.linkedList.SinglyLinkedList;
-
+package DataStructre.linkedList.SinglyLinkedList;
 public class LinkedList {
     private Node head;
 

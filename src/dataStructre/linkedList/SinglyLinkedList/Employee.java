@@ -1,4 +1,4 @@
-package dataStructre.linkedList.SinglyLinkedList;
+package DataStructre.linkedList.SinglyLinkedList;
 
 public class Employee {
     private String name;
