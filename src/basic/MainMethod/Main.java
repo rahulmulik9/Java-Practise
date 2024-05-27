@@ -6,7 +6,7 @@ public class Main {
     }
 
     /*So jvm will always call method which contain string[] args */
-
+//do something secod day yo wasted
     public static void main(){
         System.out.println(" ");
     }
