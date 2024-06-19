@@ -16,19 +16,25 @@ interface Parent{
 }
 
 class Child implements Parent{
+  /*  @Override
+    public String getAuth() {
+        return Parent.super.getAuth();
+    }
+*/
     @Override
     public String whoAmI() {
         return "I am child";
     }
+
 }
 public class Main {
     public static void main(String[] args) {
         Parent p = new Child();
-        p.getAuth();
-        p.whoAmI();
+        System.out.println( p.getAuth());
+        System.out.println(p.whoAmI());
 
         Child c = new Child();
-        c.whoAmI();
-        c.getAuth();
+        System.out.println(c.getAuth());
+        System.out.println(c.whoAmI());
     }
 }
