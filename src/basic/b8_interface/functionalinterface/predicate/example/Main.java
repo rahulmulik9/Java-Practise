@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/*Stream Collectors.partitionBy*/
+
 class Employee{
     private String name;
     private int salary;
