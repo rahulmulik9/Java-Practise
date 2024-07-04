@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+//class implements Comparable
 class Employee implements Comparable<Employee> {
     private String name;
     private int id;
@@ -44,7 +45,7 @@ class Employee implements Comparable<Employee> {
     }
 }
 
-
+//class for Comparator
 class Student {
     private String name;
     private int id;
@@ -80,18 +81,10 @@ class Student {
 }
 
 
-class NameComparision implements Comparator<Student>{
+class NameComparison implements Comparator<Student>{
     @Override
     public int compare(Student o1, Student o2) {
         return o1.getName().compareTo(o2.getName());
-    }
-}
-
-
-class IdComparision implements Comparator<Student>{
-    @Override
-    public int compare(Student o1, Student o2) {
-        return Integer.compare(o1.getId(),o2.getId());
     }
 }
 
@@ -115,12 +108,16 @@ public class Main {
         employees.forEach(System.out::println);
 
         //example of comparator
-        students.sort(new NameComparision());
+        students.sort(new NameComparison());
         students.forEach(System.out::println);
 
-        Collections.sort(students,new NameComparision());
+        //using lambda function
+        Collections.sort(students, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return Integer.compare(o1.getId(),o2.getId());
+            }
+        });
         students.forEach(System.out::println);
-
-
     }
 }
