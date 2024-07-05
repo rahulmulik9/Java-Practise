@@ -5,7 +5,6 @@ import java.util.Random;
 
 /*For following system still hange while using synchronise method
  * Application behave different each time */
-/*
 class MessageRepo {
     private String message;
     private boolean hasSeenMessage = false;
@@ -91,7 +90,6 @@ public class Main {
         reader.start();
     }
 }
-*/
 
 
 /*Thread reader is our consumer
