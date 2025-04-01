@@ -10,15 +10,26 @@ public class Question1 {
     }
 
     public static int maxSubArray(int[] nums) {
-        int sum = 0;
-        int max = Integer.MIN_VALUE;
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i; j < nums.length ; j++) {
-                sum += nums[j];
-                max = Math.max(sum, max);
+//        int sum = 0;
+//        int max = Integer.MIN_VALUE;
+//        for (int i = 0; i < nums.length; i++) {
+//            for (int j = i; j < nums.length ; j++) {
+//                sum += nums[j];
+//                max = Math.max(sum, max);
+//            }
+//            sum = 0;
+//        }
+//        return max;
+        int cs=0, ms = nums[0];
+        int n = nums.length;
+
+        for(int i=0;i<n;i++){
+            cs += nums[i];
+            ms = Math.max(cs,ms);
+
+            if(cs<0){
+                cs = 0;
             }
-            sum = 0;
-        }
-        return max;
+        }return ms;
     }
 }
