@@ -4,6 +4,7 @@ public class ScoreBoardInfo {
     private String name;
     private int score;
     private int ballFaced;
+    private int index;
 
     public String getName() {
         return name;
@@ -36,7 +37,4 @@ public class ScoreBoardInfo {
     public void setIndex(int index) {
         this.index = index;
     }
-
-    private int index;
-
 }
