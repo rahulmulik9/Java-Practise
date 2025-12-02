@@ -1,4 +1,4 @@
 package CodingProblems.CricketApp;
-//write
+//write code
 public class CricketMatch {
 }
