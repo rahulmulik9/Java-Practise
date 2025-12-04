@@ -27,10 +27,10 @@ public class CricketMatch {
         for (int i = 0; i < overs * 6; i++) {
             System.out.print("Enter a ball stat ");
             String word = sc.next();
+            word = word.toUpperCase();
             switch (word) {
                 case "WD":
                 case "NB":
-                case "W":
                   currentMatch.addExtra(1);
                     break;
                 case "1":
@@ -38,7 +38,7 @@ public class CricketMatch {
                 case "3":
                 case "4":
                 case "6":
-                    totalBalls++;
+                    totalBalls = totalBalls+1;
                     int runs = Integer.parseInt(word);
                     currentMatch.addRuns(runs,false,false);
 
@@ -52,6 +52,10 @@ public class CricketMatch {
                             System.out.println("Inning Break");
                         }
                     }
+                    break;
+                case "W":
+                    currentMatch.wicket();
+                    totalBalls = totalBalls+1;
                     break;
                 default:
                     System.out.println("Invalid Input ");

@@ -80,4 +80,12 @@ public class ScoreBoardInfo {
         }
         return false;
     }
+
+    public void wicket(){
+        if (firsInning){
+            fristTeamInfo.wicket(); ;
+        }else {
+            secondTeamInfo.wicket();
+        }
+    }
 }

@@ -9,16 +9,15 @@ public class TeamInfo {
     private int strikerIndex;
     private int nonStrikerIndex;
     private boolean isAllOut;
-    private ArrayList<PlayerInfo> playerList;
+    private ArrayList<PlayerInfo> playerList = new ArrayList<>();
     private int extraScore;
 
     public TeamInfo(boolean isAllOut, int playerCount) {
         this.isAllOut = isAllOut;
         this.playerCount = playerCount;
-
+        nextPlayerIndex = 2;
         for (int i = 0; i < playerCount; i++) {
             PlayerInfo newPlayer = new PlayerInfo(i, ("Player"+1),false);
-            assert false;
             playerList.add(newPlayer);
         }
     }
@@ -52,6 +51,7 @@ public class TeamInfo {
 
     public void wicket() {
         nextPlayerIndex = nextPlayerIndex++;
+        strikerIndex = nextPlayerIndex;
         if (nextPlayerIndex > playerCount) isAllOut = true;
     }
 
