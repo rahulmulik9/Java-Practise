@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class CricketMatch {
     ScoreBoardInfo currentMatch;
     boolean firstInning = true;
-
+    int totalBalls = 0;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int overs, players;
@@ -22,7 +22,7 @@ public class CricketMatch {
     }
 
     public void PlayMatch(int overs, int players) {
-        int totalBalls = 0;
+
         currentMatch = new ScoreBoardInfo(overs, players);
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < overs * 6; i++) {
