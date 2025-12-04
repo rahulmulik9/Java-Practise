@@ -1,12 +1,12 @@
 package CodingProblems.CricketApp;
 
 public class PlayerInfo {
-    private String name;
+    private final String name;
+    private final int index;
     private int score;
     private int ballFaced;
     private int fourCount;
     private int sixCount;
-    private int index;
     private boolean isOut;
 
     public boolean isOut() {
@@ -38,13 +38,13 @@ public class PlayerInfo {
     }
 
     public void addBall() {
-        ballFaced = ballFaced++;
+       ballFaced++;
     }
 
-    public void addRuns(int runs, boolean isFour, boolean isSix) {
+    public void addRuns(int runs) {
         score = score + runs;
-        if (isFour) fourCount = fourCount++;
-        if (isSix) fourCount = sixCount++;
+        if (runs == 4)  fourCount++;
+        if (runs == 6)  sixCount++;
     }
 
     public void setOut(boolean out) {
@@ -56,5 +56,9 @@ public class PlayerInfo {
         this.index = index;
         this.name = name;
         this.isOut = isOut;
+        score = 0;
+        ballFaced = 0;
+        fourCount = 0;
+        sixCount = 0;
     }
 }
