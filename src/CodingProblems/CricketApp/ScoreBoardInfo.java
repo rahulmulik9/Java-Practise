@@ -47,6 +47,14 @@ public class ScoreBoardInfo {
         }else {
             secondTeamInfo.addRuns( runs, isFour,isSix);
         }
+    }
+
+    public void addBall() {
+        if (firsInning){
+            fristTeamInfo.addBall( );
+        }else {
+            secondTeamInfo.addBall();
+        }
 
     }
 

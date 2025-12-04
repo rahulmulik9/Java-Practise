@@ -12,12 +12,14 @@ public class TeamInfo {
     private ArrayList<PlayerInfo> playerList = new ArrayList<>();
     private int extraScore;
 
+    private int lastWicketFall;
+
     public TeamInfo(boolean isAllOut, int playerCount) {
         this.isAllOut = isAllOut;
         this.playerCount = playerCount;
         nextPlayerIndex = 2;
         for (int i = 0; i < playerCount; i++) {
-            PlayerInfo newPlayer = new PlayerInfo(i, ("Player"+1),false);
+            PlayerInfo newPlayer = new PlayerInfo(i, ("Player"+i),false);
             playerList.add(newPlayer);
         }
     }
@@ -49,9 +51,15 @@ public class TeamInfo {
         playerList.get(strikerIndex).addRuns(runs,isFour,isSix);
     }
 
+    public void addBall(){
+        playerList.get(strikerIndex).addBall();
+
+    }
     public void wicket() {
-        nextPlayerIndex = nextPlayerIndex++;
+        lastWicketFall = strikerIndex;
+
         strikerIndex = nextPlayerIndex;
+        nextPlayerIndex++;
         if (nextPlayerIndex > playerCount) isAllOut = true;
     }
 
@@ -64,5 +72,12 @@ public class TeamInfo {
     public void addExtra(int run){
         score = score + run;
         extraScore = extraScore+run;
+    }
+
+    public PlayerInfo getFallenWicketInfo(){
+        return playerList.get(lastWicketFall);
+    }
+    public PlayerInfo getNextPlayerInfo(){
+        return playerList.get(strikerIndex);
     }
 }
