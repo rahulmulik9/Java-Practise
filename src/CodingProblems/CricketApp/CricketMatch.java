@@ -6,6 +6,20 @@ import java.util.Scanner;
 public class CricketMatch {
     ScoreBoardInfo currentMatch;
 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int overs,players;
+        System.out.print("Enter Total overs");
+        overs = sc.nextInt();
+        System.out.print("Enter Total players");
+        players = sc.nextInt();
+
+        CricketMatch match= new CricketMatch();
+        for (int i = 0; i <2 ; i++) {
+            match.PlayMatch(overs,players);
+        }
+    }
+
     public void PlayMatch(int overs, int players) {
         int totalBalls = 0;
         currentMatch = new ScoreBoardInfo(overs, players);
