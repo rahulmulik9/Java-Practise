@@ -10,6 +10,7 @@ public class TeamInfo {
     private int nonStrikerIndex;
     private boolean isAllOut;
     private ArrayList<PlayerInfo> playerList;
+    private int extraScore;
 
     public TeamInfo(boolean isAllOut, int playerCount) {
         this.isAllOut = isAllOut;
@@ -42,8 +43,11 @@ public class TeamInfo {
         return isAllOut;
     }
 
-    public void addRuns(int runs) {
+    public void addRuns(int runs, boolean isFour, boolean isSix) {
         score = score + runs;
+        if (runs==4)isFour = true;
+        if (runs==6)isSix = true;
+        playerList.get(strikerIndex).addRuns(runs,isFour,isSix);
     }
 
     public void wicket() {
@@ -55,5 +59,10 @@ public class TeamInfo {
         int temp = strikerIndex;
         strikerIndex = nonStrikerIndex;
         nonStrikerIndex = temp;
+    }
+
+    public void addExtra(int run){
+        score = score + run;
+        extraScore = extraScore+run;
     }
 }

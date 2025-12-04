@@ -1,40 +1,83 @@
 package CodingProblems.CricketApp;
 
 public class ScoreBoardInfo {
-    private String name;
+    private int totalOver;
     private int score;
-    private int ballFaced;
-    private int index;
+    private int currentOver;
+    private TeamInfo fristTeamInfo;
+    private TeamInfo secondTeamInfo;
+    private boolean firsInning;
 
-    public String getName() {
-        return name;
+    public ScoreBoardInfo(int totalOver, int totalPlayer) {
+        this.totalOver = totalOver;
+        this.score = 0;
+        currentOver = 0;
+        firsInning = true;
+        fristTeamInfo = new TeamInfo(false, totalPlayer);
+        secondTeamInfo = new TeamInfo(false, totalPlayer);
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getTotalOver() {
+        return totalOver;
     }
 
     public int getScore() {
         return score;
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public int getCurrentOver() {
+        return currentOver;
     }
 
-    public int getBallFaced() {
-        return ballFaced;
+    public TeamInfo getFristTeamInfo() {
+        return fristTeamInfo;
     }
 
-    public void setBallFaced(int ballFaced) {
-        this.ballFaced = ballFaced;
+    public TeamInfo getSecondTeamInfo() {
+        return secondTeamInfo;
     }
 
-    public int getIndex() {
-        return index;
+    public void setFirsInning(boolean firsInning) {
+        this.firsInning = firsInning;
     }
 
-    public void setIndex(int index) {
-        this.index = index;
+    public void addRuns(int runs, boolean isFour, boolean isSix) {
+        if (firsInning){
+            fristTeamInfo.addRuns( runs, isFour,isSix);
+        }else {
+            secondTeamInfo.addRuns( runs, isFour,isSix);
+        }
+
+    }
+
+    public boolean getWinner() {
+        if (fristTeamInfo.getScore() > secondTeamInfo.getScore()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void addExtra(int run) {
+        if (firsInning){
+            fristTeamInfo.addExtra( run);
+        }else {
+            secondTeamInfo.addExtra(run);
+        }
+    }
+    public void changeStrike(){
+        if (firsInning){
+            fristTeamInfo.changeStricke() ;
+        }else {
+            secondTeamInfo.changeStricke();
+        }
+    }
+
+    public boolean addOver(){
+        currentOver = currentOver+1;
+        if(totalOver==currentOver){
+            return true;
+        }
+        return false;
     }
 }
