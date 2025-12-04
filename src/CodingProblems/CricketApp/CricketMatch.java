@@ -3,10 +3,13 @@ package CodingProblems.CricketApp;
 import java.util.Scanner;
 
 //write code
+
 public class CricketMatch {
     ScoreBoardInfo currentMatch;
     boolean firstInning = true;
-    int totalBalls = 0;
+    int firsTeamScore = 0;
+    int secondTeamScore = 0;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int overs, players;
@@ -16,16 +19,33 @@ public class CricketMatch {
         players = sc.nextInt();
 
         CricketMatch match = new CricketMatch();
-        for (int i = 0; i < 2; i++) {
-            match.PlayMatch(overs, players);
+        match.startGame(match,overs,players);
+
+
+    }
+
+    public void startGame(CricketMatch match,int overs,int players) {
+        currentMatch = new ScoreBoardInfo(overs, players);
+        System.out.println("=== First Inning ===");
+        match.PlayMatch(overs, players);
+        System.out.println("=== Second Inning ===");
+        match.PlayMatch(overs, players);
+        match.getWinner();
+    }
+
+    public void getWinner() {
+        if (firsTeamScore > secondTeamScore) {
+            System.out.println("First team won by : " + (firsTeamScore - secondTeamScore));
+        } else {
+            System.out.println("Second team won by : " + (secondTeamScore - firsTeamScore));
         }
     }
 
     public void PlayMatch(int overs, int players) {
+        int totalBall = 0;
 
-        currentMatch = new ScoreBoardInfo(overs, players);
         Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < overs * 6; i++) {
+        while (totalBall < (overs * 6)) {
             System.out.print("Enter a ball stat ");
             String word = sc.next();
             word = word.toUpperCase();
@@ -39,21 +59,22 @@ public class CricketMatch {
                 case "3":
                 case "4":
                 case "6":
-                    totalBalls = totalBalls + 1;
+                    totalBall++;
                     int runs = Integer.parseInt(word);
                     currentMatch.addBall();
                     currentMatch.addRuns(runs, false, false);
-
                     if (runs % 2 != 0) {
                         currentMatch.changeStrike();
                     }
-                    getCurrentRunStat(currentMatch);
-                    System.out.println("Inning Break");
 
-                    if (totalBalls % 6 == 0) {
+
+                    if (totalBall % 6 == 0) {
                         currentMatch.changeStrike();
+                        printTotalScore(currentMatch);
                         if (currentMatch.addOver()) {
+                            totalBall = (overs + 1) * 6;
                             System.out.println("Inning Break");
+                            currentMatch.setFirsInning(false);
                             firstInning = false;
                         }
                     }
@@ -62,41 +83,49 @@ public class CricketMatch {
                 case "W":
                     currentMatch.addBall();
                     currentMatch.wicket();
-                    totalBalls = totalBalls + 1;
-                    getCurrentWicketStat(currentMatch);
+                    if (getTotalWicketFallen(players)) {
+                        totalBall = (overs + 1) * 6;
+                        printTotalScore(currentMatch);
+                        currentMatch.setFirsInning(false);
+                        System.out.println("Inning Break");
+                    } else {
+                        totalBall++;
+                    }
                     break;
                 default:
                     System.out.println("Invalid Input ");
             }
         }
+
     }
 
-    private void getCurrentWicketStat(ScoreBoardInfo currentMatch) {
-
-        if (firstInning){
-            PlayerInfo fallenWicketInfo =  currentMatch.getFristTeamInfo().getFallenWicketInfo();
-            PlayerInfo currentWicket = currentMatch.getFristTeamInfo().getNextPlayerInfo();
-            System.out.println(fallenWicketInfo.getName() + " is out on :"+fallenWicketInfo.getScore());
-            System.out.println("Next player is"+ currentWicket.getName());
-        }else {
-            PlayerInfo fallenWicketInfo =  currentMatch.getSecondTeamInfo().getFallenWicketInfo();
-            PlayerInfo currentWicket = currentMatch.getSecondTeamInfo().getNextPlayerInfo();
-            System.out.println(fallenWicketInfo.getName() + " is out on :"+fallenWicketInfo.getScore());
-            System.out.println("Next player is"+ currentWicket.getName());
-        }
-    }
-
-    private void getCurrentRunStat(ScoreBoardInfo currentMatch) {
+    public void saveScore(ScoreBoardInfo scoreBoardInfo) {
         if (firstInning) {
-            int score = currentMatch.getFristTeamInfo().getScore();
-            int wicketFallen = currentMatch.getFristTeamInfo().getNextPlayerIndex() - 1;
-            System.out.println("Current Score is : " + ": " + score);
-            System.out.println("Current wicket Fallen is : " + ": " + wicketFallen);
+            firsTeamScore = scoreBoardInfo.getFristTeamInfo().getTotalScore();
         } else {
-            int score = currentMatch.getSecondTeamInfo().getScore();
-            int wicketFallen = currentMatch.getSecondTeamInfo().getNextPlayerIndex() - 1;
-            System.out.println("Current Score is : " + ": " + score);
-            System.out.println("Current wicket Fallen is : " + ": " + wicketFallen);
+            secondTeamScore = scoreBoardInfo.getSecondTeamInfo().getTotalScore();
         }
     }
+
+    public void printTotalScore(ScoreBoardInfo currentMatch) {
+        TeamInfo team;
+        if (firstInning) {
+            team = currentMatch.getFristTeamInfo();
+        } else {
+            team = currentMatch.getSecondTeamInfo();
+        }
+        System.out.println("Team one is " + " :" + team.getTotalScore() + "\\" + team.getTotalWicketFallen());
+    }
+
+    public boolean getTotalWicketFallen(int players) {
+        TeamInfo team;
+        if (firstInning) {
+            team = currentMatch.getFristTeamInfo();
+        } else {
+            team = currentMatch.getSecondTeamInfo();
+        }
+        return team.getTotalWicketFallen() == players-1;
+    }
+
+
 }
