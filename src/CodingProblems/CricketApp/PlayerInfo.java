@@ -51,6 +51,7 @@ public class PlayerInfo {
         isOut = out;
     }
 
+    //Constructor
     public PlayerInfo(int index, String name, boolean isOut) {
         this.index = index;
         this.name = name;
