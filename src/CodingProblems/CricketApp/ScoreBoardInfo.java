@@ -1,16 +1,19 @@
 package CodingProblems.CricketApp;
 
 public class ScoreBoardInfo {
-    private int totalOver;
-    private int score;
+    private final int totalOver;
     private int currentOver;
     private TeamInfo fristTeamInfo;
     private TeamInfo secondTeamInfo;
+
+    public void setFirsInning(boolean firsInning) {
+        this.firsInning = firsInning;
+    }
+
     private boolean firsInning;
 
     public ScoreBoardInfo(int totalOver, int totalPlayer) {
         this.totalOver = totalOver;
-        this.score = 0;
         currentOver = 0;
         firsInning = true;
         fristTeamInfo = new TeamInfo(false, totalPlayer);
@@ -21,9 +24,6 @@ public class ScoreBoardInfo {
         return totalOver;
     }
 
-    public int getScore() {
-        return score;
-    }
 
     public int getCurrentOver() {
         return currentOver;
@@ -37,15 +37,11 @@ public class ScoreBoardInfo {
         return secondTeamInfo;
     }
 
-    public void setFirsInning(boolean firsInning) {
-        this.firsInning = firsInning;
-    }
-
     public void addRuns(int runs, boolean isFour, boolean isSix) {
         if (firsInning){
-            fristTeamInfo.addRuns( runs, isFour,isSix);
+            fristTeamInfo.addRuns(runs);
         }else {
-            secondTeamInfo.addRuns( runs, isFour,isSix);
+            secondTeamInfo.addRuns(runs);
         }
     }
 
@@ -59,7 +55,7 @@ public class ScoreBoardInfo {
     }
 
     public boolean getWinner() {
-        if (fristTeamInfo.getScore() > secondTeamInfo.getScore()) {
+        if (fristTeamInfo.getTotalScore() > secondTeamInfo.getTotalScore()) {
             return true;
         } else {
             return false;
@@ -75,9 +71,9 @@ public class ScoreBoardInfo {
     }
     public void changeStrike(){
         if (firsInning){
-            fristTeamInfo.changeStricke() ;
+            fristTeamInfo.changeStrike(); ;
         }else {
-            secondTeamInfo.changeStricke();
+            secondTeamInfo.changeStrike();
         }
     }
 
@@ -91,9 +87,9 @@ public class ScoreBoardInfo {
 
     public void wicket(){
         if (firsInning){
-            fristTeamInfo.wicket(); ;
+             fristTeamInfo.wicketFallen();
         }else {
-            secondTeamInfo.wicket();
+             secondTeamInfo.wicketFallen();
         }
     }
 }
