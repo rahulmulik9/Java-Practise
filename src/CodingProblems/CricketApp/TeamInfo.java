@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class TeamInfo {
     private int totalScore;
-    private int strickerIndex;
+    private int stickerIndex;
     private int nonStrikerIndex;
     private int nextPlayerIndex;
     private int wicketFallen;
@@ -13,7 +13,7 @@ public class TeamInfo {
 
     public TeamInfo(int playerCount) {
         this.thePlayerList = new ArrayList<>();
-        this.strickerIndex = 0;
+        this.stickerIndex = 0;
         this.nonStrikerIndex = 0;
         this.nextPlayerIndex = 2;
         this.wicketFallen = 0;
@@ -24,7 +24,7 @@ public class TeamInfo {
     }
 
     public void addRuns(int runs) {
-        thePlayerList.get(strickerIndex).addRunsScored(runs);
+        thePlayerList.get(stickerIndex).addRunsScored(runs);
         totalScore = totalScore + runs;
     }
 
@@ -33,8 +33,8 @@ public class TeamInfo {
     }
 
     public boolean setWicketFallen() {
-        thePlayerList.get(strickerIndex).setBatmanOut();
-        strickerIndex = nextPlayerIndex;
+        thePlayerList.get(stickerIndex).setBatmanOut();
+        stickerIndex = nextPlayerIndex;
         nextPlayerIndex++;
         if (nextPlayerIndex > playerCount) {
             System.out.println("Inning end on :"+totalScore);
@@ -44,6 +44,6 @@ public class TeamInfo {
     }
 
     public void addBallFaced() {
-        thePlayerList.get(strickerIndex).addBallFaced();
+        thePlayerList.get(stickerIndex).addBallFaced();
     }
 }
