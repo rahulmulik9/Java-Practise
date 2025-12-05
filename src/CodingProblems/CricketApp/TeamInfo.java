@@ -46,4 +46,29 @@ public class TeamInfo {
     public void addBallFaced() {
         thePlayerList.get(stickerIndex).addBallFaced();
     }
+
+    public void printTeamSummary() {
+        System.out.println("Score: " + totalScore + "/" + wicketFallen );
+        for (PlayerInfo p : thePlayerList) {
+            System.out.println(p);
+        }
+    }
+
+    public boolean isAllOut() {
+        return wicketFallen >= playerCount - 1;
+    }
+
+    public void rotateStrike() {
+        int tmp = stickerIndex;
+        stickerIndex = nonStrikerIndex;
+        nonStrikerIndex = tmp;
+    }
+
+    public int getTotalScore() {
+        return totalScore;
+    }
+
+    public int getWicketFallen() {
+        return wicketFallen;
+    }
 }
