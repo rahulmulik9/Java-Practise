@@ -5,8 +5,9 @@ import java.util.Stack;
 public class ReverseString {
     public static void main(String[] args) {
         System.out.printf(ReverseTheString("HELLOWORLD"));
-        System.out.printf(reverseStringStack("HELLOWORLD"));
         System.out.printf(reverseString("HELLOWORLD"));
+        System.out.printf(reverseStringStack("HELLOWORLD"));
+        System.out.printf(stringReverseUsingInBuiltFunction("HELLOWORLD"));
     }
 
     private static String ReverseTheString(String s) {
@@ -76,4 +77,10 @@ public class ReverseString {
         return res.toString();
     }
 
+
+    static String stringReverseUsingInBuiltFunction(String s) {
+        StringBuilder res = new StringBuilder(s);
+        res.reverse();
+        return res.toString();
+    }
 }
