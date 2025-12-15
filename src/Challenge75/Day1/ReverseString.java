@@ -38,4 +38,24 @@ public class ReverseString {
         return res.toString();
 
     }
+
+
+
+    static void reverseStringRec(char[] s, int l, int r) {
+        if (l >= r)
+            return;
+
+        char temp = s[l];
+        s[l] = s[r];
+        s[r] = temp;
+
+        reverseStringRec(s, l + 1, r - 1);
+    }
+
+
+    static String reverseString(String s) {
+        char[] arr = s.toCharArray();
+        reverseStringRec(arr, 0, arr.length - 1);
+        return new String(arr);
+    }
 }
