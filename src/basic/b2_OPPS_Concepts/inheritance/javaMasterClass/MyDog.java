@@ -1,4 +1,4 @@
-package basic.b2_OPPS_Concepts.inheritance;
+package basic.b2_OPPS_Concepts.inheritance.javaMasterClass;
 
 public class MyDog extends Dog{
     private int year;

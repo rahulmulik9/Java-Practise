@@ -1,4 +1,4 @@
-package basic.b2_OPPS_Concepts.inheritance;
+package basic.b2_OPPS_Concepts.inheritance.javaMasterClass;
 
 public class App {
     public static void main(String[] args) {

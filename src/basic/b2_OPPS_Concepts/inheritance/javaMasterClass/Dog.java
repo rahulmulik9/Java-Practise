@@ -1,4 +1,4 @@
-package basic.b2_OPPS_Concepts.inheritance;
+package basic.b2_OPPS_Concepts.inheritance.javaMasterClass;
 
 public class Dog extends Animal{
     //when you extend class Dog from Animal(Parent) it should contain constructor of parent variables also
