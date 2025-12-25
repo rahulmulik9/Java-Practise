@@ -19,18 +19,18 @@ public class Contain_duplicate {
         Set<Integer> numsSet = new HashSet<>();
 
         //approach first
-//        for (int number:nums){
-//            if(numsSet.contains(number)){
-//                return true;
-//            }else {
-//                numsSet.add(number);
-//            }
-//        }
-//        return false;
+        for (int number:nums){
+            if(numsSet.contains(number)){
+                return true;
+            }else {
+                numsSet.add(number);
+            }
+        }
+        return false;
 
         //second approach
-        for (int number:nums){numsSet.add(number);}
-        return numsSet.size()!=nums.length;
+//        for (int number:nums){numsSet.add(number);}
+//        return numsSet.size()!=nums.length;
 
     }
 }
