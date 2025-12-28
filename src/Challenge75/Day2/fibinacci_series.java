@@ -4,6 +4,8 @@ public class fibinacci_series {
     public static void main(String[] args) {
         PrintFibonacci printFibonacci = new PrintFibonacci();
         printFibonacci.mainMethod();
+
+        new PrintFibonacci().mainMethod();
     }
 
 }
