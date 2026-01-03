@@ -7,7 +7,7 @@ public class Longest_Common_prefix {
     }
 }
 
-
+//Class to implement function
 class SolutionS {
     public String longestCommonPrefix(String[] strs) {
         if (strs.length == 0)
