@@ -9,7 +9,24 @@ class ListNode {
       ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
 
+class Solution {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
+        if(list1!=null && list2!=null){
+            if(list1.val<list2.val){
+                list1.next=mergeTwoLists(list1.next,list2);
+                return list1;
+            }
+            else{
+                list2.next=mergeTwoLists(list1,list2.next);
+                return list2;
+            }
+        }
+        if(list1==null)
+            return list2;
+        return list1;
+    }
+}
 
 public class Merge_Sorted_linkedList {
     // Utility method to print linked list
@@ -40,7 +57,7 @@ public class Merge_Sorted_linkedList {
         printList(l2);
 
         // Merge lists
-        ListNode merged = mergeTwoLists(l1, l2);
+        ListNode merged =new Solution().mergeTwoLists(l1, l2);
 
         System.out.print("Merged List: ");
         printList(merged);
