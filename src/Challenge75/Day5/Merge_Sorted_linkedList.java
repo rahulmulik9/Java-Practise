@@ -28,6 +28,7 @@ class Solution {
     }
 }
 
+//refactor and understand code
 public class Merge_Sorted_linkedList {
     // Utility method to print linked list
     public static void printList(ListNode head) {
