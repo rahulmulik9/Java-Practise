@@ -10,6 +10,7 @@ package basic.AccessModifiers;
 public class FinalVariables {
     public static void main(String[] args) {
 
+        new FinalVaribles().CheckInitialization();
     }
 }
 
@@ -31,5 +32,12 @@ class FinalVaribles {
     public void initialiseFinalVar(){
         final int MAX_COUNT;
         MAX_COUNT = 102;
+        System.out.println(MAX_COUNT);
+    }
+
+    public void CheckInitialization(){
+        System.out.println(MAX_VALUE);
+        System.out.println(MAX_INT);
+        initialiseFinalVar();
     }
 }
