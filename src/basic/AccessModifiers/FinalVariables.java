@@ -24,7 +24,12 @@ class FinalVaribles {
     //If it is member variable then declared in constructor.
     private final int MAX_INT;
     public FinalVaribles() {
-        MAX_INT = 100;
+        MAX_INT = 101;
     }
 
+    //If it is local then initialise it in method itself
+    public void initialiseFinalVar(){
+        final int MAX_COUNT;
+        MAX_COUNT = 102;
+    }
 }
