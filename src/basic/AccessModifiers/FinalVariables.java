@@ -13,12 +13,18 @@ public class FinalVariables {
     }
 }
 
-class FinalVaribles{
+class FinalVaribles {
     //IF it is static then initialise it in static block
     public static final int MAX_VALUE;
+
     static {
         MAX_VALUE = 100;
     }
 
+    //If it is member variable then declared in constructor.
+    private final int MAX_INT;
+    public FinalVaribles() {
+        MAX_INT = 100;
+    }
 
 }
