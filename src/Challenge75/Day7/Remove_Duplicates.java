@@ -1,4 +1,4 @@
-package Challenge75.Day6.Day7;
+package Challenge75.Day7;
 
 public class Remove_Duplicates {
     public static void main(String[] args) {
