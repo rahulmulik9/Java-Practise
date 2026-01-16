@@ -10,7 +10,10 @@ public class RemoveDuplicateLinkedList {
         ListNode list2 = new ListNode(2,list33);
         ListNode list1 = new ListNode(1,list2);
         ListNode currentNode = new SolutionRemovedLinkesList().deleteDuplicates(list1);
-
+        while(currentNode.next != null){
+            System.out.println(currentNode.val);
+            currentNode = currentNode.next;
+        }
     }
 
 
