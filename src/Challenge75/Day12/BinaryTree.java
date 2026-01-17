@@ -1,6 +1,28 @@
 package Challenge75.Day12;
 
 public class BinaryTree {
+    public static void main(String[] args) {
+
+        // Creating tree
+        Node root = new Node(1);
+
+        root.left = new Node(2);
+        root.right = new Node(3);
+
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+
+        root.right.right = new Node(6);
+
+        System.out.print("Preorder Traversal: ");
+        BinaryTreeExample.preorder(root);
+
+        System.out.print("\nInorder Traversal: ");
+        BinaryTreeExample.inorder(root);
+
+        System.out.print("\nPostorder Traversal: ");
+        BinaryTreeExample.postorder(root);
+    }
 }
 
 class Node {
