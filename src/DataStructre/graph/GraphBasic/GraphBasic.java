@@ -38,7 +38,31 @@ class Graph {
         }
     }
 
+    //Breadth Fist Search
+    public void bfsTraversal(int startVertex) {
+        boolean[] visited = new boolean[vertexCount];
+        Queue<Integer> queue = new LinkedList<>();
+
+        visited[startVertex] = true;
+        queue.add(startVertex);
+
+        while (!queue.isEmpty()) {
+            int currentVertex = queue.poll();
+            System.out.print(currentVertex + " ");
+
+            for (int neighbor : adjacencyList.get(currentVertex)) {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    queue.add(neighbor);
+                }
+            }
+        }
+    }
+
 }
+
+
+
 
 public class GraphBasic {
     public static void main(String[] args) {
@@ -48,6 +72,7 @@ public class GraphBasic {
         graph.addEdge(0, 2);
         graph.addEdge(1, 3);
         graph.addEdge(2, 3);
+
     }
 }
 
