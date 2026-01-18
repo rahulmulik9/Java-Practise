@@ -27,6 +27,16 @@ class Graph {
         adjacencyList.get(source).add(destination);
     }
 
+    //print graph
+    public void printGraph() {
+        for (int i = 0; i < vertexCount; i++) {
+            System.out.print(i + " -> ");
+            for (int neighbor : adjacencyList.get(i)) {
+                System.out.print(neighbor + " ");
+            }
+            System.out.println();
+        }
+    }
 
 }
 
