@@ -77,6 +77,36 @@ class Graph {
     }
 
 
+    //Cycle detection
+    public boolean hasCycle() {
+        boolean[] visited = new boolean[vertexCount];
+
+        for (int i = 0; i < vertexCount; i++) {
+            if (!visited[i]) {
+                if (hasCycleUtil(i, visited, -1)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private boolean hasCycleUtil(int currentVertex, boolean[] visited, int parent) {
+        visited[currentVertex] = true;
+
+        for (int neighbor : adjacencyList.get(currentVertex)) {
+            if (!visited[neighbor]) {
+                if (hasCycleUtil(neighbor, visited, currentVertex)) {
+                    return true;
+                }
+            } else if (neighbor != parent) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 }
 
 
