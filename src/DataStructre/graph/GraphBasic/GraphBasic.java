@@ -1,28 +1,25 @@
 package DataStructre.graph.GraphBasic;
+
 import java.util.*;
 
 class Graph {
-    int V;
-    ArrayList<ArrayList<Integer>> adj;
+    private final int vertexCount;
+    private final List<List<Integer>> adjacencyList;
 
-    Graph(int vertices) {
-        V = vertices;
-        adj = new ArrayList<>();
+    // Constructor
+    public Graph(int vertexCount) {
+        this.vertexCount = vertexCount;
+        adjacencyList = new ArrayList<>();
 
-        for (int i = 0; i < V; i++) {
-            adj.add(new ArrayList<>());
+        for (int i = 0; i < vertexCount; i++) {
+            adjacencyList.add(new ArrayList<>());
         }
     }
-
-    void addEdge(int u, int v) {
-        adj.get(u).add(v);
-        adj.get(v).add(u); // remove this line for directed graph
-    }
+}
 
 public class GraphBasic {
     public static void main(String[] args) {
 
     }
-  }
 }
 
