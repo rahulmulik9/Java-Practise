@@ -16,10 +16,18 @@ class Graph {
         }
     }
 
+    //Undirected Graph (Both Direction)
     public void addEdge(int source, int destination) {
         adjacencyList.get(source).add(destination);
         adjacencyList.get(destination).add(source);
     }
+
+    //Directed Graph
+    public void addDirectedEdge(int source, int destination) {
+        adjacencyList.get(source).add(destination);
+    }
+
+
 }
 
 public class GraphBasic {
