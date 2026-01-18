@@ -59,9 +59,25 @@ class Graph {
         }
     }
 
+   //Depth first Search
+    public void dfsTraversal(int startVertex) {
+        boolean[] visited = new boolean[vertexCount];
+        dfsUtil(startVertex, visited);
+    }
+
+    private void dfsUtil(int currentVertex, boolean[] visited) {
+        visited[currentVertex] = true;
+        System.out.print(currentVertex + " ");
+
+        for (int neighbor : adjacencyList.get(currentVertex)) {
+            if (!visited[neighbor]) {
+                dfsUtil(neighbor, visited);
+            }
+        }
+    }
+
+
 }
-
-
 
 
 public class GraphBasic {
