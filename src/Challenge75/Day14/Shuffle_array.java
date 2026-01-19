@@ -2,7 +2,9 @@ package Challenge75.Day14;
 
 public class Shuffle_array {
     public static void main(String[] args) {
-
+       int[] nums = {2,5,1,3,4,7};
+       int n = 3;
+       new SolutionShufle().shuffle(nums,n);
     }
 }
 class SolutionShufle {
