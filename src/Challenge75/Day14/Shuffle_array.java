@@ -1,10 +1,12 @@
 package Challenge75.Day14;
 
+import java.util.Arrays;
+
 public class Shuffle_array {
     public static void main(String[] args) {
        int[] nums = {2,5,1,3,4,7};
        int n = 3;
-       new SolutionShufle().shuffle(nums,n);
+        Arrays.stream(new SolutionShufle().shuffle(nums, n)).forEach(System.out::println);
     }
 }
 class SolutionShufle {
