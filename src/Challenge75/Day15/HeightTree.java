@@ -17,4 +17,15 @@ public class HeightTree {
         root.left.left = new Node(5);
         root.left.right = new Node(11);
     }
+
+    static int height(Node root) {
+        if (root == null)
+            return -1;
+
+        // compute the height of left and right subtrees
+        int lHeight = height(root.left);
+        int rHeight = height(root.right);
+
+        return Math.max(lHeight, rHeight) + 1;
+    }
 }
