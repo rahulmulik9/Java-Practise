@@ -6,6 +6,18 @@ You must implement a solution with a linear runtime complexity and use only cons
 public class SingleNumber {
     public static void main(String[] args) {
         int[]  numsOrder = {4,1,2,1,2};
+        System.out.println(new SolutionSingleNumber().singleNumber(numsOrder));
+    }
+}
+
+class SolutionSingleNumber {
+    public int singleNumber(int[] nums) {
+        int ans = 0;
+
+        for (final int num : nums)
+            ans ^= num;
+
+        return ans;
     }
 }
 
