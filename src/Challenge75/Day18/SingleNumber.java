@@ -4,5 +4,9 @@ package Challenge75.Day18;
 You must implement a solution with a linear runtime complexity and use only constant extra space.*/
 
 public class SingleNumber {
+    public static void main(String[] args) {
+        int[]  numsOrder = {4,1,2,1,2};
+    }
 }
+
 
