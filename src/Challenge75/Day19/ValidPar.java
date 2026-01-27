@@ -2,7 +2,7 @@ package Challenge75.Day19;
 
 public class ValidPar {
     public static void main(String[] args) {
-
+        System.out.println(new SolutionValidPar().isPalindrome("{}[]{}[{}]"));
     }
 }
 
