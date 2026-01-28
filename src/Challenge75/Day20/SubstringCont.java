@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.Map;
 
 public class SubstringCont {
+    public static void main(String[] args) {
+
+    }
 }
 class SolutionSub {
     public List<Integer> findSubstring(String s, String[] words) {
