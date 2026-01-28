@@ -14,7 +14,9 @@ import java.util.Map;
 
 public class SubstringCont {
     public static void main(String[] args) {
-
+       String str = "barfoothefoobarman";
+       String[] words = {"foo","bar"};
+       new SolutionSub().findSubstring(str,words);
     }
 }
 class SolutionSub {
