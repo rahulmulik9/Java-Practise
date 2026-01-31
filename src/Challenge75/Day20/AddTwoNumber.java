@@ -1,6 +1,6 @@
 package Challenge75.Day20;
 
-//solve problem by userselft with other method if possible
+//solve problem by your self with other method if possible
 class ListNode {
     int val;
     ListNode next;
