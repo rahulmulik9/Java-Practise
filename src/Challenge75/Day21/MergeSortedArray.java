@@ -12,6 +12,9 @@ public class MergeSortedArray {
     }
 }
 class SolutionArray{
-    public void merge(int[] nums1, int m, int[] nums2, int n) {}
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int[] finalAry = new int[m + n];
+        int i = 0, j = 0, f = 0;
+    }
 }
 
