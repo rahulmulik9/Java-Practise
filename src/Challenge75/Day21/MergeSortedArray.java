@@ -15,6 +15,13 @@ class SolutionArray{
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int[] finalAry = new int[m + n];
         int i = 0, j = 0, f = 0;
+        while (i < m && j < n) {
+            if (nums1[i] < nums2[j]) {
+                finalAry[f++] = nums1[i++];
+            } else {
+                finalAry[f++] = nums2[j++];
+            }
+        }
     }
 }
 
