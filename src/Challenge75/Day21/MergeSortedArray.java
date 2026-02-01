@@ -11,4 +11,7 @@ public class MergeSortedArray {
        int[] nums2 = {2,5,6};
     }
 }
+class SolutionArray{
+
+}
 
