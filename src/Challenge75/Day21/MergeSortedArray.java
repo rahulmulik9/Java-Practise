@@ -7,11 +7,11 @@ The final sorted array should not be returned by the function, but instead be st
 public class MergeSortedArray {
     public static void main(String[] args) {
        int[] nums1 = {1,2,3,0,0,0};
-       int count = 3;
+       int m = 3,n=3;
        int[] nums2 = {2,5,6};
     }
 }
 class SolutionArray{
-
+    public void merge(int[] nums1, int m, int[] nums2, int n) {}
 }
 
