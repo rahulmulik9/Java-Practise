@@ -29,6 +29,10 @@ class SolutionArray{
         while (j < n) {
             finalAry[f++] = nums2[j++];
         }
+        // Copy finalAry back into nums1
+        for (int k = 0; k < m + n; k++) {
+            nums1[k] = finalAry[k];
+        }
     }
 }
 
