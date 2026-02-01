@@ -26,6 +26,9 @@ class SolutionArray{
         while (i < m) {
             finalAry[f++] = nums1[i++];
         }
+        while (j < n) {
+            finalAry[f++] = nums2[j++];
+        }
     }
 }
 
