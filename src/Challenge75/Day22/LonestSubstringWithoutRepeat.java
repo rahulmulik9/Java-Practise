@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class LonestSubstringWithoutRepeat {
     public static void main(String[] args) {
-        String s = "abcabcbb";
+        String s = "abcbbcbb";
         System.out.println(new SolutionLongestSubstring().lengthOfLongestSubstring(s));
     }
 }
