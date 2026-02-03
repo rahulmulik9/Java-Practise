@@ -5,11 +5,12 @@ Return the maximum amount of water a container can store.*/
 public class ContainerWithMostWater {
     public static void main(String[] args) {
         int[] height = {1,8,6,2,5,4,8,3,7};
+        System.out.println(new SolutionContain().maxArea(height));
     }
 }
 
 class SolutionContain{
-    public static int maxArea(int [] heights){
+    public  int maxArea(int [] heights){
         int left = 0;
         int right = heights.length-1;
         int maxArea = 0;
