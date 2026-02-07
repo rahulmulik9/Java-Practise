@@ -1,7 +1,9 @@
 package Challenge75.Day7;
 
 public class FindDuplicate {
+    public static void main(String[] args) {
 
+    }
 }
 
 class SolutionFindDuplicate {
