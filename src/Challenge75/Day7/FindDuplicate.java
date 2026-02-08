@@ -2,7 +2,8 @@ package Challenge75.Day7;
 
 public class FindDuplicate {
     public static void main(String[] args) {
-
+int[] nums = {1,5,9,7,6,5,2,4};
+new SolutionFindDuplicate().findDuplicate(nums);
     }
 }
 
