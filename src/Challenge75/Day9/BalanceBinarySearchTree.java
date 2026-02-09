@@ -19,7 +19,9 @@ class TreeNode {
  }
 
 public class BalanceBinarySearchTree {
+    public static void main(String[] args) {
 
+    }
 }
 
 class SolutionsBalanceBST{
