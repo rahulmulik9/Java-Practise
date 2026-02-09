@@ -85,6 +85,21 @@ public class BalanceBinarySearchTree {
 
         System.out.println("Test 1 AFTER:");
         printLevel(balanced1);
+
+
+        // -------- Test Case 2 : Left Skewed --------
+        TreeNode root2 = new TreeNode(4);
+        root2.left = new TreeNode(3);
+        root2.left.left = new TreeNode(2);
+        root2.left.left.left = new TreeNode(1);
+
+        System.out.println("\nTest 2 BEFORE:");
+        printLevel(root2);
+
+        TreeNode balanced2 = sol.balanceBST(root2);
+
+        System.out.println("Test 2 AFTER:");
+        printLevel(balanced2);
     }
 }
 
