@@ -28,6 +28,9 @@ class SolutionsBalanceBST{
 
         // Step 1: inorder traversal
         inorder(root, list);
+
+        // Step 2: build balanced BST
+        return build(list, 0, list.size() - 1);
     }
 
     private void inorder(TreeNode root, List<Integer> list) {
@@ -36,5 +39,17 @@ class SolutionsBalanceBST{
         inorder(root.left, list);
         list.add(root.val);
         inorder(root.right, list);
+    }
+
+    private TreeNode build(List<Integer> list, int l, int r) {
+        if (l > r) return null;
+
+        int mid = (l + r) / 2;
+
+        TreeNode node = new TreeNode(list.get(mid));
+        node.left = build(list, l, mid - 1);
+        node.right = build(list, mid + 1, r);
+
+        return node;
     }
 }
