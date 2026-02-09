@@ -18,3 +18,7 @@ A binary search tree is balanced if the depth of the two subtrees of every node 
 public class BalanceBinarySearchTree {
 
 }
+
+class SolutionsBalanceBST{
+
+}
