@@ -3,7 +3,9 @@ package Challenge75.Day9;
 A binary search tree is balanced if the depth of the two subtrees of every node never differs by more than 1.*/
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 class TreeNode {
       int val;
@@ -49,6 +51,24 @@ class SolutionsBalanceBST{
     }
 }
 public class BalanceBinarySearchTree {
+
+    // level order print (easy to see balancing)
+    static void printLevel(TreeNode root) {
+        if (root == null) return;
+
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+
+        while (!q.isEmpty()) {
+            TreeNode cur = q.poll();
+            System.out.print(cur.val + " ");
+
+            if (cur.left != null) q.add(cur.left);
+            if (cur.right != null) q.add(cur.right);
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         SolutionsBalanceBST sol = new SolutionsBalanceBST();
 
@@ -58,6 +78,13 @@ public class BalanceBinarySearchTree {
         root1.right.right = new TreeNode(3);
         root1.right.right.right = new TreeNode(4);
 
+        System.out.println("Test 1 BEFORE:");
+        printLevel(root1);
+
+        TreeNode balanced1 = sol.balanceBST(root1);
+
+        System.out.println("Test 1 AFTER:");
+        printLevel(balanced1);
     }
 }
 
