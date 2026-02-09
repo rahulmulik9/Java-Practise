@@ -17,13 +17,6 @@ class TreeNode {
           this.right = right;
      }
  }
-
-public class BalanceBinarySearchTree {
-    public static void main(String[] args) {
-
-    }
-}
-
 class SolutionsBalanceBST{
     public TreeNode balanceBST(TreeNode root) {
         List<Integer> list = new ArrayList<>();
@@ -55,3 +48,16 @@ class SolutionsBalanceBST{
         return node;
     }
 }
+public class BalanceBinarySearchTree {
+    public static void main(String[] args) {
+        SolutionsBalanceBST sol = new SolutionsBalanceBST();
+
+        // -------- Test Case 1 : Right Skewed --------
+        TreeNode root1 = new TreeNode(1);
+        root1.right = new TreeNode(2);
+        root1.right.right = new TreeNode(3);
+        root1.right.right.right = new TreeNode(4);
+
+    }
+}
+
