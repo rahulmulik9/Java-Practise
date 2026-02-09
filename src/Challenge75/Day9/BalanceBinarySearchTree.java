@@ -2,7 +2,10 @@ package Challenge75.Day9;
 /*Given the root of a binary search tree, return a balanced binary search tree with the same node values. If there is more than one answer, return any of them.
 A binary search tree is balanced if the depth of the two subtrees of every node never differs by more than 1.*/
 
- class TreeNode {
+import java.util.ArrayList;
+import java.util.List;
+
+class TreeNode {
       int val;
       TreeNode left;
       TreeNode right;
@@ -20,5 +23,18 @@ public class BalanceBinarySearchTree {
 }
 
 class SolutionsBalanceBST{
+    public TreeNode balanceBST(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
 
+        // Step 1: inorder traversal
+        inorder(root, list);
+    }
+
+    private void inorder(TreeNode root, List<Integer> list) {
+        if (root == null) return;
+
+        inorder(root.left, list);
+        list.add(root.val);
+        inorder(root.right, list);
+    }
 }
