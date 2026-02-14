@@ -6,7 +6,8 @@ import java.util.List;
 
 public class ThreeSUm {
     public static void main(String[] args) {
-
+int [] nums={1,8,6,5,7,3,3};
+new Solution().threeSum(nums);
     }
 }
 class Solution {
