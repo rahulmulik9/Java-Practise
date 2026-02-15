@@ -1,6 +1,9 @@
 package Challenge75.Day13;
 
 public class Concat_Array {
+    public static void main(String[] args) {
+
+    }
     public int[] getConcatenation(int[] nums) {
         int n = nums.length;
         int[] ans = new int[2 * n];
