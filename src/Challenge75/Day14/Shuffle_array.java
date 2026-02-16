@@ -9,6 +9,7 @@ public class Shuffle_array {
         Arrays.stream(new SolutionShufle().shuffle(nums, n)).forEach(System.out::println);
     }
 }
+//soultions class
 class SolutionShufle {
     public int[] shuffle(int[] nums, int n) {
         // Create result array with size 2n (using bit shift for multiplication by 2)
