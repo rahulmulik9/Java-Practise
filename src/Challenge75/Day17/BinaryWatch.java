@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryWatch {
+    public static void main(String[] args) {
+
+    }
 }
 class SolutionBW {
     public List<String> readBinaryWatch(int turnedOn) {
