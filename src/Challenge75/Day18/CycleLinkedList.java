@@ -24,4 +24,25 @@ class SolutionCycle {
     }
 }
 public class CycleLinkedList {
+    public static void main(String[] args) {
+
+        // Creating nodes
+        ListNode head = new ListNode(1);
+        ListNode second = new ListNode(2);
+        ListNode third = new ListNode(3);
+        ListNode fourth = new ListNode(4);
+
+        // Linking nodes
+        head.next = second;
+        second.next = third;
+        third.next = fourth;
+
+        // Creating cycle
+        fourth.next = second;  // cycle here
+
+        SolutionCycle solution = new SolutionCycle();
+        boolean result = solution.hasCycle(head);
+
+        System.out.println("Does the linked list have a cycle? " + result);
+    }
 }
