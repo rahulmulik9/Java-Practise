@@ -8,6 +8,7 @@ class ListNode {
          next = null;
      }
 }
+//code for solutions
 class SolutionCycle {
     public boolean hasCycle(ListNode head) {
         ListNode slow = head;
@@ -19,7 +20,6 @@ class SolutionCycle {
             if (slow == fast)
                 return true;
         }
-
         return false;
     }
 }
