@@ -1,4 +1,9 @@
 package Challenge75.Day21;
 
-public class NoProblemDoen {
+public class NoProblemDoen
+{
+    public static void main(String[] args) {
+        //today also not done
+    }
 }
+
