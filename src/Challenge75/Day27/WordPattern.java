@@ -14,7 +14,19 @@ Explanation:
 The bijection can be established as:
 
 'a' maps to "dog".
-'b' maps to "cat".*/
+'b' maps to "cat".
+Example 2:
+
+Input: pattern = "abba", s = "dog cat cat fish"
+
+Output: false
+*/
 
 public class WordPattern {
+    public static void main(String[] args) {
+
+    }
+}
+class PatterSolutions{
+
 }
