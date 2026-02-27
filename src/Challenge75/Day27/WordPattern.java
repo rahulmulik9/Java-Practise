@@ -24,9 +24,17 @@ Output: false
 
 public class WordPattern {
     public static void main(String[] args) {
+        String pattern = "abba";
+        String s = "dog cat cat dog";
+
 
     }
 }
-class PatterSolutions{
 
+class PatterSolutions {
+    boolean checkPatternExistOrNot(String pattern, String s) {
+
+        return false;
+
+    }
 }
