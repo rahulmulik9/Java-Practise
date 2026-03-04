@@ -8,9 +8,7 @@ public class MoveZeros {
         int[] intary1= {0};
         int[] intary2= {1,3,5,6};
         Arrays.stream(new MoveZeroSol().MoveZeros(intary)).forEach(System.out::print);
-        System.out.println("");
         Arrays.stream(new MoveZeroSol().MoveZeros(intary1)).forEach(System.out::print);
-        System.out.println("");
         Arrays.stream(new MoveZeroSol().MoveZeros(intary2)).forEach(System.out::print);
     }
 }
