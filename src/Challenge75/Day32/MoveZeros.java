@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class MoveZeros {
     public static void main(String[] args) {
-        int[] intary = {0, 5, 6, 0, 4, 8, 0, 6, 7};
-        int[] intary1= {0};
-        int[] intary2= {1,3,5,6};
-        Arrays.stream(new MoveZeroSol().MoveZeros(intary)).forEach(System.out::print);
-        Arrays.stream(new MoveZeroSol().MoveZeros(intary1)).forEach(System.out::print);
-        Arrays.stream(new MoveZeroSol().MoveZeros(intary2)).forEach(System.out::print);
+        int[] arryFirst = {0, 5, 6, 0, 4, 8, 0, 6, 7};
+        int[] arrySecond= {0};
+        int[] arryThird= {1,3,5,6};
+        Arrays.stream(new MoveZeroSol().MoveZeros(arryFirst)).forEach(System.out::print);
+        Arrays.stream(new MoveZeroSol().MoveZeros(arrySecond)).forEach(System.out::print);
+        Arrays.stream(new MoveZeroSol().MoveZeros(arryThird)).forEach(System.out::print);
     }
 }
 
