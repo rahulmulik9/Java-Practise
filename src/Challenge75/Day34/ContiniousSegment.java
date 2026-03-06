@@ -23,6 +23,11 @@ public class ContiniousSegment {
 class ContinousSol{
     public boolean isContiniousOne(String s){
         char[] arr = s.toCharArray();
+
+        if(arr.length==0)return false;
+        if(arr.length==1 && arr[0]=='1'){
+            return true;
+        }
         for (int i = 1; i <arr.length ; i++) {
             if( arr[i]=='1' && arr[i]==arr[i-1] ){
                 return true;
