@@ -16,6 +16,7 @@ public class ContiniousSegment {
         String first = "1001";
         String second = "10110";
         System.out.println(new ContinousSol().isContiniousOne(first));
+        System.out.println(new ContinousSol().isContiniousOne(second));
     }
 }
 
