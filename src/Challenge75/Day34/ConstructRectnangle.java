@@ -17,6 +17,12 @@ public class ConstructRectnangle {
 
 class RectSolution {
     public int[] getRectangular(int area) {
-        return new int[]{};
+        int width = (int)Math.sqrt(area);
+
+        while(area%width !=0){
+            width--;
+        }
+        int length = area/width;
+        return new int[]{width,length};
     }
 }
