@@ -1,4 +1,7 @@
 package Challenge75.Day34;
+
+import java.util.Arrays;
+
 /*PROBLEM STATEMENT
 * A web developer needs to know how to design a web page's size. So, given a specific rectangular web page’s area, your job by now is to design a rectangular web page, whose length L and width W satisfy the following requirements:
 The area of the rectangular web page you designed must equal to the given target area.
@@ -7,12 +10,13 @@ The difference between length L and width W should be as small as possible.
 Return an array [L, W] where L and W are the length and width of the web page you designed in sequence.*/
 public class ConstructRectnangle {
     public static void main(String[] args) {
-
+        int area = 68;
+        Arrays.stream(new RectSolution().getRectangular(area)).forEach(System.out::print);
     }
 }
 
-class RectSolution{
-    public int[] getRectangular(int area){
+class RectSolution {
+    public int[] getRectangular(int area) {
         return new int[]{};
     }
 }
