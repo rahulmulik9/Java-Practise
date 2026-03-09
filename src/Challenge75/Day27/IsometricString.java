@@ -5,6 +5,9 @@ Two strings s and t are isomorphic if the characters in s can be replaced to get
 All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
  */
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class IsometricString {
     public static void main(String[] args) {
         String s = "abb";
@@ -12,11 +15,15 @@ public class IsometricString {
     }
 }
 
-class IsoMetricStringSol{
-    public boolean isIsoMetric(String s, String t){
+class IsoMetricStringSol {
+    public boolean isIsoMetric(String s, String t) {
+        Map<Character, Integer> charToIndex_s = new HashMap<>();
+        Map<Character, Integer> charToIndex_t = new HashMap<>();
 
+        for (Integer i = 0; i < s.length(); ++i)
+            if (charToIndex_s.put(s.charAt(i), i) != charToIndex_t.put(t.charAt(i), i))
+                return false;
 
         return true;
     }
-
 }
