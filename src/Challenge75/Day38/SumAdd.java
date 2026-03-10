@@ -11,4 +11,14 @@ Example 2:
 Input: num = 0
 Output: 0*/
 public class SumAdd {
+    public static void main(String[] args) {
+        int a = 556;
+
+    }
 }
+class SumSol{
+    public int totalSum(int a){
+        return 1 + (a - 1) % 9;
+    }
+}
+
