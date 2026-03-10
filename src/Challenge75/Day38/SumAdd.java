@@ -13,7 +13,7 @@ Output: 0*/
 public class SumAdd {
     public static void main(String[] args) {
         int a = 556;
-
+        System.out.println(new SumSol().totalSum(a));
     }
 }
 class SumSol{
