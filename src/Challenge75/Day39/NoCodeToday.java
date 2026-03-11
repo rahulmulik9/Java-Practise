@@ -3,3 +3,6 @@ package Challenge75.Day39;
 //make a plan its 11 march
 public class NoCodeToday {
 }
+class NoStudyToday{
+
+}
