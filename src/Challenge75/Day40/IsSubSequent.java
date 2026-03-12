@@ -1,6 +1,9 @@
 package Challenge75.Day40;
 
 public class IsSubSequent {
+    public static void main(String[] args) {
+
+    }
 }
 
 
