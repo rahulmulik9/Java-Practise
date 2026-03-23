@@ -7,10 +7,13 @@ Example with n = 19:
 6² + 8² = 36 + 64 = 100
 1² + 0² + 0² = 1 ✓ → Happy!*/
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class HappyNumber {
     public static void main(String[] args) {
+        int[] numbers = {10, 56, 898, 44, 565878, 5565, 889777, 2265644, 221546, 44444, 88, 5564878, 121, 66};
+        Arrays.stream(numbers).forEach(n -> System.out.println(n + " → " + new SolutionHappyNumber().isHappy(n)));
 
     }
 }
