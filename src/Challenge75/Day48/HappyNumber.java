@@ -10,6 +10,9 @@ Example with n = 19:
 import java.util.HashSet;
 
 public class HappyNumber {
+    public static void main(String[] args) {
+
+    }
 }
 
 
