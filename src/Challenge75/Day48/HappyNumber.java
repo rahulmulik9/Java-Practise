@@ -15,6 +15,9 @@ public class HappyNumber {
         int[] numbers = {10, 56, 898, 44, 565878, 5565, 889777, 2265644, 221546, 44444, 88, 5564878, 121, 66};
         Arrays.stream(numbers).forEach(n -> System.out.println(n + " → " + new SolutionHappyNumber().isHappy(n)));
 
+        for(int n:numbers){
+            System.out.println(n + " → " + new SolutionHappyNumber().isHappy(n));
+        }
     }
 }
 
