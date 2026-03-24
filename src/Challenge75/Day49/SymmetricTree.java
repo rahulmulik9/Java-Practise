@@ -12,7 +12,17 @@ class TreeNode {
       }
 }
 public class SymmetricTree {
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1,
+                new TreeNode(2, new TreeNode(3), new TreeNode(4)),
+                new TreeNode(2, new TreeNode(4), new TreeNode(3))
+        );
 
+        SolutionSyT solution = new SolutionSyT();
+        boolean result = solution.isSymmetric(root);
+
+        System.out.println("Is tree symmetric? " + result);
+    }
 }
 
 class SolutionSyT {
