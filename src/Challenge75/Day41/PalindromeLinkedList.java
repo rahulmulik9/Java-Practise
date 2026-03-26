@@ -21,7 +21,7 @@ class SolutionLinkedList {
             slow = slow.next;
         slow = reverseList(slow);
 
-        while (slow != null) {
+        while (slow != null) { 
             if (slow.val != head.val)
                 return false;
             slow = slow.next;
