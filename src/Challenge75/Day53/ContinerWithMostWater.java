@@ -19,6 +19,32 @@ class SolutionCWM {
 
         return maxWater;
     }
+
+
+    // ─────────────────────────────────────────────
+    // OPTIMAL (Two Pointer)  →  O(n) time | O(1) space
+    // Start from both ends, always move the shorter wall inward
+    // ─────────────────────────────────────────────
+    public int maxAreaOptimal(int[] height) {
+        int left  = 0;
+        int right = height.length - 1;
+        int maxWater = 0;
+
+        while (left < right) {
+            // Water = shorter wall × distance between pointers
+            int water = Math.min(height[left], height[right]) * (right - left);
+            maxWater = Math.max(maxWater, water);
+
+            // Move the shorter wall inward — moving the taller one can never help
+            if (height[left] < height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return maxWater;
+    }
 }
 
 public class ContinerWithMostWater {
