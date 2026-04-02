@@ -1,5 +1,6 @@
 package Challenge75_new.Day2;
-class SolDuplicateNumber{
+
+class SolDuplicateNumber {
 
     public int findDuplicate(int[] nums) {
 
@@ -23,8 +24,10 @@ class SolDuplicateNumber{
         return slow; // where they meet = duplicate
     }
 }
+
 public class DuplicateNumber {
     public static void main(String[] args) {
-
+        int[] numbers = {3, 1, 3, 4, 2};
+        System.out.println( new SolDuplicateNumber().findDuplicate(numbers));
     }
 }
