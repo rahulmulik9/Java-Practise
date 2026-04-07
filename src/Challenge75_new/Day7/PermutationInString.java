@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 class SolPermutationInString {
 
-    public static boolean checkInclusionBrute(String s1, String s2) {
+    public boolean checkInclusionBrute(String s1, String s2) {
         if (s1.length() > s2.length()) return false;
         char[] sorted1 = s1.toCharArray();
         Arrays.sort(sorted1);
@@ -17,7 +17,7 @@ class SolPermutationInString {
         return false;
     }
 
-    public static boolean checkInclusionOptimal(String s1, String s2) {
+    public boolean checkInclusionOptimal(String s1, String s2) {
         if (s1.length() > s2.length()) return false;
         int[] freq1 = new int[26];
         int[] freq2 = new int[26];
@@ -33,5 +33,16 @@ class SolPermutationInString {
         return Arrays.equals(freq1, freq2);
     }
 }
+
 public class PermutationInString {
+    public static void main(String[] args) {
+
+        // Test 1: "ba" is permutation of "ab" found in "eidbaooo" → true
+        System.out.println("Test 1 Brute  : " + (new SolPermutationInString().checkInclusionBrute("ab", "eidbaooo") == true ? "PASS" : "FAIL"));
+        System.out.println("Test 1 Optimal: " + (new SolPermutationInString().checkInclusionOptimal("ab", "eidbaooo") == true ? "PASS" : "FAIL"));
+
+        // Test 2: no permutation of "ab" in "eidboaoo" → false
+        System.out.println("Test 2 Brute  : " + (new SolPermutationInString().checkInclusionBrute("ab", "eidboaoo") == false ? "PASS" : "FAIL"));
+        System.out.println("Test 2 Optimal: " + (new SolPermutationInString().checkInclusionOptimal("ab", "eidboaoo") == false ? "PASS" : "FAIL"));
+    }
 }
