@@ -1,4 +1,24 @@
 package Challenge75_new.Day8;
 
+class SolMinimumSizeSubarraySum {
+
+    public static int minSubArrayLenBrute(int target, int[] nums) {
+        int n = nums.length;
+        int minLen = Integer.MAX_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+            for (int j = i; j < n; j++) {
+                sum += nums[j];
+                if (sum >= target) {
+                    minLen = Math.min(minLen, j - i + 1);
+                    break;
+                }
+            }
+        }
+
+        return minLen == Integer.MAX_VALUE ? 0 : minLen;
+    }
+}
 public class MinimumSizeSubarraySum {
 }
