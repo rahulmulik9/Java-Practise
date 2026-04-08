@@ -38,4 +38,21 @@ class SolMinimumSizeSubarraySum {
     }
 }
 public class MinimumSizeSubarraySum {
+    public static void main(String[] args) {
+        int[] nums1 = {2,3,1,2,4,3};
+        int target1 = 7;
+        int res1Brute = SolMinimumSizeSubarraySum.minSubArrayLenBrute(target1, nums1);
+        int res1Opt = SolMinimumSizeSubarraySum.minSubArrayLenOptimal(target1, nums1);
+        System.out.println("Test 1 Brute  : " + (res1Brute == 2 ? "PASS" : "FAIL"));
+        System.out.println("Test 1 Optimal: " + (res1Opt == 2 ? "PASS" : "FAIL"));
+
+        int[] nums2 = {1,4,4};
+        int target2 = 4;
+        int res2Brute = SolMinimumSizeSubarraySum.minSubArrayLenBrute(target2, nums2);
+        int res2Opt = SolMinimumSizeSubarraySum.minSubArrayLenOptimal(target2, nums2);
+        System.out.println("Test 2 Brute  : " + (res2Brute == 1 ? "PASS" : "FAIL"));
+        System.out.println("Test 2 Optimal: " + (res2Opt == 1 ? "PASS" : "FAIL"));
+
+    }
 }
+
