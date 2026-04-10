@@ -1,4 +1,5 @@
 package Challenge75_new.Day10;
+
 class SolSubarrayProductLessThanK {
 
     public static int numSubarrayProductLessThanKBrute(int[] nums, int k) {
@@ -14,6 +15,7 @@ class SolSubarrayProductLessThanK {
         }
         return count;
     }
+
     public static int numSubarrayProductLessThanKOptimal(int[] nums, int k) {
         if (k <= 1) return 0;
 
@@ -32,5 +34,13 @@ class SolSubarrayProductLessThanK {
         return count;
     }
 }
+
 public class SubarrayProductLessThanK {
+    public static void main(String[] args) {
+
+        // Test 1: LeetCode example → 8 valid subarrays
+        int[] t1 = {10, 5, 2, 6};
+        System.out.println("Test 1 Brute  : " + (new SolSubarrayProductLessThanK().numSubarrayProductLessThanKBrute(t1, 100) == 8 ? "PASS" : "FAIL"));
+        System.out.println("Test 1 Optimal: " + (new SolSubarrayProductLessThanK().numSubarrayProductLessThanKOptimal(t1, 100) == 8 ? "PASS" : "FAIL"));
+    }
 }
