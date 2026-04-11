@@ -43,4 +43,9 @@ class SolMinimumWindowSubstring {
 }
 
 public class MinimumWindowSubstring {
+    public static void main(String[] args) {
+        // Test 1: Classic example → "BANC"
+        System.out.println("Test 1 Brute  : " + (new SolMinimumWindowSubstring().minWindowBrute("ADOBECODEBANC", "ABC").equals("BANC")  ? "PASS" : "FAIL"));
+        System.out.println("Test 1 Optimal: " + (new SolMinimumWindowSubstring().minWindowOptimal("ADOBECODEBANC", "ABC").equals("BANC") ? "PASS" : "FAIL"));
+    }
 }
