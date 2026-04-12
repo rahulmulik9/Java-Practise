@@ -1,4 +1,5 @@
 package Challenge75_new.Day11;
+
 class SolLongestRepeatingCharacterReplacement {
 
     public static int characterReplacementBrute(String s, int k) {
@@ -56,5 +57,12 @@ class SolLongestRepeatingCharacterReplacement {
         return maxLen;
     }
 }
+
 public class LongestRepeatingCharacterReplacement {
+    public static void main(String[] args) {
+
+        // Test 1: "AABABBA" k=1 → replace 1 char → longest = 4
+        System.out.println("Test 1 Brute  : " + (new SolLongestRepeatingCharacterReplacement().characterReplacementBrute("AABABBA", 1) == 4 ? "PASS" : "FAIL"));
+        System.out.println("Test 1 Optimal: " + (new SolLongestRepeatingCharacterReplacement().characterReplacementOptimal("AABABBA", 1) == 4 ? "PASS" : "FAIL"));
+    }
 }
