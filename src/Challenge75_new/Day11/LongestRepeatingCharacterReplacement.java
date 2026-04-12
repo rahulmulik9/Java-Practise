@@ -3,15 +3,34 @@ class SolLongestRepeatingCharacterReplacement {
 
     public static int characterReplacementBrute(String s, int k) {
         int maxLen = 0;
+
+        // Try every starting point
         for (int i = 0; i < s.length(); i++) {
-            int[] freq = new int[26];
-            int maxFreq = 0;
+
+            int[] freq = new int[26]; // count each letter in current window
+            int maxFreq = 0;          // most frequent letter count
+
+            // Try every ending point
             for (int j = i; j < s.length(); j++) {
+
+                // Add new character to window
                 freq[s.charAt(j) - 'A']++;
+
+                // Update most frequent count
                 maxFreq = Math.max(maxFreq, freq[s.charAt(j) - 'A']);
+
                 int windowSize = j - i + 1;
-                if (windowSize - maxFreq <= k) maxLen = Math.max(maxLen, windowSize);
-                else break;
+
+                // How many chars need replacing?
+                int replacementsNeeded = windowSize - maxFreq;
+
+                if (replacementsNeeded <= k) {
+                    // Window is valid! Update answer
+                    maxLen = Math.max(maxLen, windowSize);
+                } else {
+                    // Window is invalid and only gets worse → stop early
+                    break;
+                }
             }
         }
         return maxLen;
