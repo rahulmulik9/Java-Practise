@@ -15,6 +15,7 @@ class SolSubarraySumEqualsK {
         }
         return count;
     }
+
     public static int subarraySumOptimal(int[] nums, int k) {
         HashMap<Integer, Integer> prefixCount = new HashMap<>();
         prefixCount.put(0, 1);
@@ -30,4 +31,11 @@ class SolSubarraySumEqualsK {
 }
 
 public class SubarraySumEqualsK {
+    public static void main(String[] args) {
+
+        // Test 1: [1,1,1] k=2 → [1,1] at index 0 and [1,1] at index 1 → 2
+        int[] t1 = {1, 1, 1};
+        System.out.println("Test 1 Brute  : " + (new SolSubarraySumEqualsK().subarraySumBrute(t1, 2) == 2 ? "PASS" : "FAIL"));
+        System.out.println("Test 1 Optimal: " + (new SolSubarraySumEqualsK().subarraySumOptimal(t1, 2) == 2 ? "PASS" : "FAIL"));
+    }
 }
