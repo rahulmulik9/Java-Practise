@@ -23,4 +23,11 @@ class SolFindPivotIndex {
     }
 }
 public class FindPivotIndex {
+    public static void main(String[] args) {
+
+        // Test 1: [1,7,3,6,5,6] → pivot at index 3
+        int[] t1 = {1, 7, 3, 6, 5, 6};
+        System.out.println("Test 1 Brute  : " + (new SolFindPivotIndex().pivotIndexBrute(t1) == 3 ? "PASS" : "FAIL"));
+        System.out.println("Test 1 Optimal: " + (new SolFindPivotIndex().pivotIndexOptimal(t1) == 3 ? "PASS" : "FAIL"));
+    }
 }
