@@ -22,4 +22,10 @@ class SolRansomNote {
     }
 }
 public class RansomNote {
+    public static void main(String[] args) {
+
+        // Test 1: "aa" from "aab" → true (magazine has 2 a's)
+        System.out.println("Test 1 Brute  : " + (new SolRansomNote().canConstructBrute("aa", "aab") == true ? "PASS" : "FAIL"));
+        System.out.println("Test 1 Optimal: " + (new SolRansomNote().canConstructOptimal("aa", "aab") == true ? "PASS" : "FAIL"));
+    }
 }
