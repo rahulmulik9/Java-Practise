@@ -32,4 +32,11 @@ class SolLongestConsecutiveSequence {
 }
 
 public class LongestConsecutiveSequence {
-}
+    public static void main(String[] args) {
+        SolLongestConsecutiveSequence sol = new SolLongestConsecutiveSequence();
+
+        // Test 1: [100,4,200,1,3,2] → 4
+        System.out.println("Test 1 Brute  : " + (sol.longestConsecutiveBrute(new int[]{100, 4, 200, 1, 3, 2}) == 4 ? "PASS" : "FAIL"));
+        System.out.println("Test 1 Optimal: " + (sol.longestConsecutiveOptimal(new int[]{100, 4, 200, 1, 3, 2}) == 4 ? "PASS" : "FAIL"));
+    }
+    }
