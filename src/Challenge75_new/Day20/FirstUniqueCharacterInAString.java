@@ -12,6 +12,7 @@ class SolFirstUniqueCharacterInAString {
         }
         return -1;
     }
+
     public static int firstUniqCharOptimal(String s) {
         int[] freq = new int[26];
         for (char c : s.toCharArray()) freq[c - 'a']++;
@@ -23,4 +24,10 @@ class SolFirstUniqueCharacterInAString {
 }
 
 public class FirstUniqueCharacterInAString {
+    public static void main(String[] args) {
+
+        // Test 1: "leetcode" → 'l' at index 0 is first unique
+        System.out.println("Test 1 Brute  : " + (new SolFirstUniqueCharacterInAString().firstUniqCharBrute("leetcode") == 0 ? "PASS" : "FAIL"));
+        System.out.println("Test 1 Optimal: " + (new SolFirstUniqueCharacterInAString().firstUniqCharOptimal("leetcode") == 0 ? "PASS" : "FAIL"));
+    }
 }
