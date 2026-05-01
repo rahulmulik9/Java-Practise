@@ -5,7 +5,7 @@ For every LeetCode problem, explain and generate code in this exact order:
 Simple Explanation — explain the problem in very simple plain English with a small example
 Brute Force — simple logic explanation + clean code + time & space complexity
 Pattern — mention which pattern/technique this problem belongs to
-Optimal Solution — best approach with code + time & space complexity + explain the solution in detail step by step with example walkthrough
+Optimal Solution — best approach with code + time & space complexity + explain the solution in detail step by step with example walkthrough.Dont give interactive visual showing
 Common Mistakes — list traps and mistakes people commonly make
 Test Cases — 3 to 4 test cases inside Java main method, inline only, no extra helper methods
 
