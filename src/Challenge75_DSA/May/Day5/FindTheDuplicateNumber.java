@@ -1,4 +1,4 @@
-package Challenge75_DSA.May.Day4.Day5;
+package Challenge75_DSA.May.Day5;
 
 
 class SolFindTheDuplicateNumber {
