@@ -1,6 +1,4 @@
-
-
-package Challenge75_new.Day16;
+package Challenge75_DSA.May.Day16;
 
 class SolSubarraySumEqualsK {
     public static int subarraySumBrute(int[] nums, int k) {
