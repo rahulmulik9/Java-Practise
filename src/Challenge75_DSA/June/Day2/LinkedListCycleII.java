@@ -1,4 +1,4 @@
-package Challenge75_DSA.June.Day1.Day2;
+package Challenge75_DSA.June.Day2;
 class ListNode {
     int val;
     ListNode next;
