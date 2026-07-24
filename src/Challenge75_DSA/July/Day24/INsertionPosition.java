@@ -27,3 +27,4 @@ class Solution {
         return firstTrueIndex != -1 ? firstTrueIndex : n;
     }
 }
+//git changes
