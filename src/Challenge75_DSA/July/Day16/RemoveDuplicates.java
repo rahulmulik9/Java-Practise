@@ -1,4 +1,4 @@
-package Challenge75_DSA.Day16;
+package Challenge75_DSA.July.Day16;
 
 public class RemoveDuplicates {
 }
