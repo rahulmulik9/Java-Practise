@@ -3,6 +3,7 @@ package Challenge75_DSA.July.Day29;
 
 public class MergeLinkedList {
 }
+//why ist
 class ListNode {
       int val;
       ListNode next;
