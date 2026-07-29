@@ -21,7 +21,7 @@ public class RemoveDuplicateLinkedList {
 
 /**
  * Definition for singly-linked list. */
-class ListNode {
+public class ListNode {
       int val;
       ListNode next;
       ListNode() {}
