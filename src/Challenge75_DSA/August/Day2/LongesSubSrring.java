@@ -1,4 +1,4 @@
-package Challenge75_DSA.August.Day1.Day2;
+package Challenge75_DSA.August.Day2;
 
 public class LongesSubSrring {
 }
